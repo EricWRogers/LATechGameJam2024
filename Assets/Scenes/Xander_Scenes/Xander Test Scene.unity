@@ -971,6 +971,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &543994102 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 209449380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604dfbbf654f92618bc36972daaa4968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &607378186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1357542595}
-  health: {fileID: 0}
+  health: {fileID: 543994102}
   healthText: {fileID: 607378188}
 --- !u!114 &1357542595
 MonoBehaviour:
@@ -2937,6 +2949,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGamePaused: 0
   pauseMenuUI: {fileID: 302262415}
+  healthBar: {fileID: 1782259292}
+  PowerUpSection: {fileID: 851746482}
+  TMSection: {fileID: 1274993888}
+  GunSection: {fileID: 1479780038}
 --- !u!114 &1610816956
 MonoBehaviour:
   m_ObjectHideFlags: 0

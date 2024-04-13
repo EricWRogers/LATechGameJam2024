@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     private RaycastHit m_info;
     public LayerMask mask;
     public List<string> tags;
+    public GameObject groundCheck;
 
 
 
@@ -66,13 +67,20 @@ public class Movement : MonoBehaviour
 
      private void CollisionCheck()
         {
-            if (Physics.Linecast(transform.position - Vector3.up - Vector3.up  - Vector3.up, transform.position, out m_info, mask))
+            if (Physics.Linecast(transform.position, groundCheck.transform.position, out m_info, mask))
             {
-                isGrounded = true;
                 if (tags.Contains(m_info.transform.tag))
                 {
                     isGrounded = true;
                 }
+                else
+                {
+                    isGrounded = false;
+                }
+            }
+            else
+            {
+                isGrounded = false;
             }
         }
 
