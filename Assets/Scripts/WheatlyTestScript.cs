@@ -19,7 +19,7 @@ public class WheatlyTestScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0)) 
+       /* if(Input.GetKeyDown(KeyCode.Mouse0)) 
         {
             Debug.Log("HIT!");
             anim.Play("WheatlyDamaged");
@@ -42,8 +42,14 @@ public class WheatlyTestScript : MonoBehaviour
         else
         {
             Invoke("Invoker", 5f);
-        }
+        }*/
 
+    }
+
+    public void Hurt()
+    {
+        Debug.Log("HIT!");
+        anim.Play("WheatlyDamaged");
     }
 
     void Ivoker()

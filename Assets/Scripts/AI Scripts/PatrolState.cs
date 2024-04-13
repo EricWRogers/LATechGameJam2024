@@ -18,7 +18,7 @@ public class PatrolState : SimpleState
     {
 
         base.OnStart();
-        destination = ((BasicEnemyStateMachine)stateMachine).patrolPoints[0].position;
+        destination = ((BasicEnemyStateMachine)stateMachine).patrolPoints[points].position;
         agent.SetDestination(destination);
         Debug.Log("" + destination);
 
@@ -45,6 +45,11 @@ public class PatrolState : SimpleState
         if (points >= ((BasicEnemyStateMachine)stateMachine).patrolPoints.Count)
         {
             points = 0;
+        }
+
+        if(((BasicEnemyStateMachine)stateMachine).LOS == true)
+        {
+            stateMachine.ChangeState(nameof(ChaseState));
         }
         /* foreach (Transform point in ((BasicEnemyStateMachine)stateMachine).patrolPoints)
                 {

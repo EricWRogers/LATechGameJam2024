@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: JumpBoost
   m_EditorClassIdentifier: 
   count: 1
-  active: 0
+  active: 1
   upgradeName: jump Boost
   upgradeSprite: {fileID: 0}
   newColor: {r: 0, g: 0, b: 0, a: 0}
   dropChance: 0
   boostValue: 2
+  tempSpeed: 5
+  jumpSpeed: 0
+  player: {fileID: 0}
