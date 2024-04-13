@@ -15395,6 +15395,7 @@ MonoBehaviour:
   agent: {fileID: 5125197041916324445}
   particleExplode: {fileID: 5399861369994223187}
   spareParticle: {fileID: 0}
+  brain: {fileID: 4499371333322747267}
 --- !u!54 &6771432542714772946
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20797,7 +20798,7 @@ GameObject:
   - component: {fileID: 6970432076173787930}
   m_Layer: 0
   m_Name: WheatlyHenchAI
-  m_TagString: Untagged
+  m_TagString: CANBREAK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25978,7 +25979,7 @@ GameObject:
   - component: {fileID: 8602333916017769720}
   m_Layer: 0
   m_Name: WHEATLYHENCH
-  m_TagString: Untagged
+  m_TagString: CANBREAK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
