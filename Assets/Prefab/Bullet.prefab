@@ -125,5 +125,6 @@ MonoBehaviour:
       m_Calls: []
   mask:
     serializedVersion: 2
-    m_Bits: 0
-  tags: []
+    m_Bits: 1
+  tags:
+  - CANBREAK
