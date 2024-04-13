@@ -39,13 +39,17 @@ public class Movement : MonoBehaviour
     {
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         input.Normalize();
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             moveSpeed = baseSpeed * sprintSpeedMultiplier;
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (!(Input.GetKey(KeyCode.LeftShift)))
         {
             moveSpeed = baseSpeed;
+        }
+        else
+        {
+            moveSpeed = baseSpeed;   
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -60,7 +64,7 @@ public class Movement : MonoBehaviour
     {
         CollisionCheck();
 
-        rb.AddForce(CalculateMovement(moveSpeed), ForceMode.VelocityChange);
+        rb.AddForce(CalculateMovement(moveSpeed), ForceMode.Impulse);
 
         m_lastPosition = transform.position;
     }
