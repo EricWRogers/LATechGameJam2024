@@ -23,7 +23,7 @@ public class JumpBoostUpgrade : Upgrade
         {
             player = GameObject.FindWithTag("Player");
             
-            player.GetComponent<Movement>().jumpForce += boostValue;
+            player.GetComponent<Movement>().jumpForce *= boostValue;
         }
     }
 
@@ -44,7 +44,7 @@ public class JumpBoostUpgrade : Upgrade
             if(player.GetComponent<Movement>()!=null)
             {
                 
-                player.GetComponent<Movement>().jumpForce *= boostValue;
+                player.GetComponent<Movement>().jumpForce += boostValue;
             }
         }
     }
@@ -56,6 +56,7 @@ public class JumpBoostUpgrade : Upgrade
             
             if(player.GetComponent<Movement>().isGrounded == false)
             {   
+                Debug.Log("SetJumpSpeed");
                 player.GetComponent<Movement>().moveSpeed *= jumpSpeed;
             }
             
