@@ -11,7 +11,7 @@ public class UpgradeSystem : MonoBehaviour
     //public TextMeshProUGUI upgradeNameText;
     
     public List<Upgrade> upgrades;
-    public Upgrade core;
+    //public Upgrade core;
     public bool activate;
     public int upgradeCount;
 
@@ -22,6 +22,7 @@ public class UpgradeSystem : MonoBehaviour
         upgrades.Add(upgrade);
         upgrade.PickUp();
         //SetUpgradeText();
+        upgradeCount++;
        
     }
 
@@ -33,11 +34,12 @@ public class UpgradeSystem : MonoBehaviour
             upgrades.RemoveAt(upgrades.Count-1);
         }
         
-        if(!upgrades.Contains(core))
-        {
-            Debug.Log("DIE" + gameObject.name +core.upgradeName + "NotFound");
-            //DIE();
-        }
+        upgradeCount--;
+        // if(!upgrades.Contains(core))
+        // {
+        //     Debug.Log("DIE" + gameObject.name +core.upgradeName + "NotFound");
+        //     //DIE();
+        // }
 //        SetUpgradeText();
 
     }
@@ -110,7 +112,7 @@ public class UpgradeSystem : MonoBehaviour
     void Update()
     {
         //SetUpgradeText();
-        ActivateEffects();
+        //ActivateEffects();
     }
 
 }

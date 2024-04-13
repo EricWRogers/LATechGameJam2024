@@ -41,10 +41,10 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenuUI.SetActive(false);
-        // healthBar.SetActive(true);
-        // GunSection.SetActive(true);
-        // PowerUpSection.SetActive(true);
-        // TMSection.SetActive(true);
+        healthBar.SetActive(true);
+        GunSection.SetActive(true);
+        PowerUpSection.SetActive(true);
+        TMSection.SetActive(true);
         Time.timeScale = 1.0f;
         isGamePaused = false;
     }
@@ -54,10 +54,10 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);
-        // healthBar.SetActive(false);
-        // GunSection.SetActive(false);
-        // PowerUpSection.SetActive(false);
-        // TMSection.SetActive(false);
+        healthBar.SetActive(false);
+        GunSection.SetActive(false);
+        PowerUpSection.SetActive(false);
+        TMSection.SetActive(false);
         //Time.timeScale = 0.0f;
         isGamePaused = true;
     }
@@ -66,7 +66,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Loading Main Menu");
         Time.timeScale = 1.0f;
-        //SceneManager.LoadScene(0);
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 
     public void QuitGame()

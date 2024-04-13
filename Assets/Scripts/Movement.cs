@@ -22,8 +22,9 @@ public class Movement : MonoBehaviour
     private Vector3 m_lastPosition;
     private RaycastHit m_info;
     public LayerMask mask;
-    public List<string> tags;
     public GameObject groundCheck;
+    public UpgradeSystem upgradeSystem;
+    public float mag;
 
 
 
@@ -52,12 +53,15 @@ public class Movement : MonoBehaviour
             moveSpeed = baseSpeed;   
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse1)) && isGrounded)
         {
 
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+
+        mag = Vector3.Magnitude(transform.position);
+        upgradeSystem.ActivateEffects();
     }
 
     void FixedUpdate()
@@ -73,14 +77,7 @@ public class Movement : MonoBehaviour
         {
             if (Physics.Linecast(transform.position, groundCheck.transform.position, out m_info, mask))
             {
-                if (tags.Contains(m_info.transform.tag))
-                {
-                    isGrounded = true;
-                }
-                else
-                {
-                    isGrounded = false;
-                }
+                isGrounded = true;
             }
             else
             {
@@ -97,7 +94,7 @@ public class Movement : MonoBehaviour
 
         Vector3 velocity = rb.velocity;
 
-        if (input.magnitude > 0.5f)
+        if (mag > 0.5f)
         {
             Vector3 velocityChange = targetVelocity - velocity;
 
@@ -114,5 +111,10 @@ public class Movement : MonoBehaviour
         }
 
 
+    }
+
+    public void DestroyMovingAround()
+    {
+        Destroy(this);
     }
 }
