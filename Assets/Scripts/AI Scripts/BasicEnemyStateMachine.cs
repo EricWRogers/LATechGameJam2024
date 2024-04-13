@@ -15,9 +15,6 @@ public class BasicEnemyStateMachine : SimpleStateMachine
     [Tooltip("How long it takes to switch from chase to patrol.")]
     public float delay = 0;
 
-    //General var
-    public Rigidbody rb;
-
     //Patrol var
     public List<Transform> patrolPoints;
     public List<Transform> targetPos;
@@ -41,16 +38,8 @@ public class BasicEnemyStateMachine : SimpleStateMachine
     void Update()
     {
         targetPos = gameObject.GetComponent<FOV>().visibleTargets;
-        gameObject.GetComponent<FOV>().targetsInSight = LOS;
-        
-            //Debug.Log("Chasing: " + gameObject.GetComponent<FOV>().visibleTargets[0].name);
-            //ChangeState(nameof(ChaseState));
-        
+        LOS = gameObject.GetComponent<FOV>().targetsInSight;
 
     }
-    /*
-    public bool LOSCHECK()
-    {
-        FOV.FindVisibleTargets();
-    }*/
+    
 }

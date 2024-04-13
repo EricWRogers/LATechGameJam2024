@@ -14,6 +14,7 @@ public class FOV : MonoBehaviour
     public LayerMask obstacleMask;
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
+    [HideInInspector]
     public bool targetsInSight;
 
     void Update()

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool isGamePaused = false;
+    public bool isGamePaused = false;
 
     public GameObject pauseMenuUI;
 
@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        Time.timeScale = 1.0f;
         //SceneManager.LoadScene(0);
     }
 

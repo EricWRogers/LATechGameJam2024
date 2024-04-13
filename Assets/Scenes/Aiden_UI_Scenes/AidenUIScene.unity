@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1157,9 +1157,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.34901962}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.49019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.18431373}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.3137255}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.5254902}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1523,6 +1523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56c1d7c3544d9b458d67523130351dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGamePaused: 0
   pauseMenuUI: {fileID: 1612490454}
 --- !u!114 &882577797 stripped
 MonoBehaviour:
@@ -1594,126 +1595,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+    - target: {fileID: 2827565410210588431, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
-      propertyPath: currentHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: pausedGame
       value: 
-      objectReference: {fileID: 882577797}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Damage
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 882577797}
+      objectReference: {fileID: 735461725}
     - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
       propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1566810532}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Kill
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetHealth
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SuperPupSystems.Helper.Health, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SuperPupSystems.Helper.Health, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: HealthBar, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5986635869959824606, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9010230052708564299, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: pausedGame
+      value: 
+      objectReference: {fileID: 735461725}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2024,7 +1925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2032,9 +1933,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.34901962}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.49019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.18431373}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.3137255}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.5254902}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2068,7 +1969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3187,7 +3088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -3195,9 +3096,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.34901962}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.49019608}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.18431373}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.3137255}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.5254902}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -3243,7 +3144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
