@@ -7,6 +7,9 @@ public class WheatlyTestScript : MonoBehaviour
 
     public Animator anim;
 
+    public ParticleSystem particleR;
+    public ParticleSystem particleL;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,11 @@ public class WheatlyTestScript : MonoBehaviour
             Debug.Log("HIT!");
             anim.Play("WheatlyDamaged");
         }
+        else if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Debug.Log("HIT!");
+            anim.Play("WheatlyShoot");
+        }
         else
         {
             Invoke("Invoker", 5f);
@@ -31,5 +39,15 @@ public class WheatlyTestScript : MonoBehaviour
     void Ivoker()
     {
         anim.Play("WheatlyMove");
+    }
+
+    public void RightShoot()
+    {
+        particleR.Play();
+    }
+
+    public void LeftShoot()
+    {
+        particleL.Play();
     }
 }
