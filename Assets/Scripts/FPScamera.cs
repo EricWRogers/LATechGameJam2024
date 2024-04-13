@@ -10,6 +10,7 @@ public class FPScamera : MonoBehaviour
     public Camera playerCamera;
 
     private float rotationX = 0f;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +31,13 @@ public class FPScamera : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
 
         player.Rotate(Vector3.up * mouseX);
+       
+
 
         rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+        rotationX = Mathf.Clamp(rotationX, -90f, 30f);
+        
+
 
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
     }
