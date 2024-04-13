@@ -13,6 +13,7 @@ public class PickUpUpgrade : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             upgradeSystem.AddUpgrade(upgradeHolder.upgrade);
+            Destroy(gameObject);
         }
     }
     void Start()

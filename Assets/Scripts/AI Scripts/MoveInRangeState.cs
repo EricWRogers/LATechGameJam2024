@@ -9,7 +9,7 @@ using UnityEngine.AI;
 public class MoveInRangeState : SimpleState
 {
     public NavMeshAgent agent;
-    private bool inRange;
+
 
     public override void OnStart()
     {

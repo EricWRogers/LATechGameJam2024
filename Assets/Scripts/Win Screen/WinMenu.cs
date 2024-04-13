@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using UnityEngine.SceneManagement;
+using SuperPupSystems.Helper;
 
 public class WinMenu : MonoBehaviour
 {
-    public bool isPlayerDead = false;
+    public bool didSurviveTime = false;
+
+    public Health playerHealth;
 
     public GameObject winSection;
 
@@ -21,13 +26,18 @@ public class WinMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if(didSurviveTime && playerHealth.currentHealth != 0)
         {
-            if(isPlayerDead)
-            {
-                Win();
-            }
+            Win();
         }   
+    }
+
+    public void TimeToSurvive(bool timeOver)
+    {
+        if(timeOver)
+        {
+            didSurviveTime = true;
+        }
     }
 
     public void Win()
@@ -46,21 +56,25 @@ public class WinMenu : MonoBehaviour
     public void Retry()
     {
         //SceneManager.LoadSceneAysnc(1);
+        Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadMenu()
     {
         Debug.Log("Loading Main Menu");
         Time.timeScale = 1.0f;
-        //SceneManager.LoadScene(0);
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quit the Game");
-        #if(Unity_Editior)
-        EditorApplication.ExitPlayMode();
-        #endif
+        #if(UNITY_EDITOR)
+        Debug.Log("Quiting Play Mode");
+        EditorApplication.ExitPlaymode();
+        #else
+        Debug.Log("Quitting Build");
         Application.Quit();
+        #endif
     }
 }
