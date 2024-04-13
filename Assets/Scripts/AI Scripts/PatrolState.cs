@@ -18,7 +18,7 @@ public class PatrolState : SimpleState
     {
 
         base.OnStart();
-        destination = ((BasicEnemyStateMachine)stateMachine).patrolPoints[0].position;
+        destination = ((BasicEnemyStateMachine)stateMachine).patrolPoints[points].position;
         agent.SetDestination(destination);
         Debug.Log("" + destination);
 

@@ -17,8 +17,7 @@ public class FPScamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        StopMouseMovement(false);
     }
 
     // Update is called once per frame
@@ -52,13 +51,13 @@ public class FPScamera : MonoBehaviour
     {
         if (stop)
         {
-            Cursor.lockState = CursorLockMode.Locked; 
-            Cursor.visible = false; 
+            Cursor.lockState = CursorLockMode.None; 
+            Cursor.visible = true; 
         }
         else
         {
-            Cursor.lockState = CursorLockMode.None; 
-            Cursor.visible = true; 
+            Cursor.lockState = CursorLockMode.Locked; 
+            Cursor.visible = false; 
         }
     }
 }

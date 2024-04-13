@@ -25,7 +25,7 @@ public class TogglePanel : MonoBehaviour
         {
             upgradeSystem.GetComponent<UpgradeSystem>().AddUpgrade(upgrade.GetComponent<UpgradeHolder>().upgrade);
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.O))
         {
             upgradeSystem.GetComponent<UpgradeSystem>().PopUpgrade(/*upgradeSystem.GetComponent<UpgradeSystem>().upgradeCount-1*/);
         }

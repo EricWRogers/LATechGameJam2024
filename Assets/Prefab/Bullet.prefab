@@ -225,7 +225,7 @@ MonoBehaviour:
   damage: 1
   speed: 40
   lifeTime: 10
-  destroyOnImpact: 1
+  destroyOnImpact: 0
   hitTarget:
     m_PersistentCalls:
       m_Calls: []
