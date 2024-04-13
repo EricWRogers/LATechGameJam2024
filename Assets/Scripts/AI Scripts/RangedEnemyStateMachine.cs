@@ -5,33 +5,35 @@ using SuperPupSystems.Helper;
 using SuperPupSystems.StateMachine;
 using UnityEngine.AI;
 using static UnityEditor.VersionControl.Asset;
+using static UnityEditor.PlayerSettings;
+
 public class RangedEnemyStateMachine : SimpleStateMachine
 {
-    public MoveInRangeState moveIn;
+    public MoveInRangeState moveInRange;
     public AttackState shoot;
+
+    public bool LOS;
     public Transform target;
 
 
     private void Awake()
     {
+        states.Add(moveInRange);
         states.Add(shoot);
-        states.Add(moveIn);
 
         foreach (SimpleState s in states)
             s.stateMachine = this;
 
-        ChangeState(nameof(moveIn));
+        ChangeState(nameof(MoveInRangeState));
     }
 
     void Start()
     {
-
     }
-
     void Update()
     {
-        
-        
+
+        LOS = gameObject.GetComponent<FOV>().targetsInSight;
 
     }
 
