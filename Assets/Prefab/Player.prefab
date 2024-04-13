@@ -891,6 +891,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3018154112593348681}
+        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
+        m_MethodName: DestroyShooting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   maxHealth: 100
   currentHealth: 1
 --- !u!1 &6947316654071313910
@@ -1144,7 +1156,7 @@ PrefabInstance:
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: timeout.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
@@ -1159,6 +1171,11 @@ PrefabInstance:
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
@@ -1178,6 +1195,11 @@ PrefabInstance:
       objectReference: {fileID: 9010230052708564299}
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
+      propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 3018154112593348681}
+    - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
       propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -1189,6 +1211,11 @@ PrefabInstance:
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
@@ -1208,6 +1235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
+      propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: DestroyShooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
       propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: WinMenu, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -1223,6 +1255,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
+      propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Gun, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
       propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -1234,6 +1271,11 @@ PrefabInstance:
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1915527667047518538, guid: f35632d41f56f744a9e3f322561f0bad,
@@ -1372,7 +1414,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8670159154372266664}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1174226349575920356}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e56c1d7c3544d9b458d67523130351dc, type: 3}
