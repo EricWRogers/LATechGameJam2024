@@ -21,7 +21,7 @@ public class EnemyDefeated : MonoBehaviour
         particle = GetComponentInChildren<ParticleSystem>();
         anim = GetComponentInChildren<Animator>();
         rigi = GetComponent<Rigidbody>();
-        agent.GetComponentInParent<NavMeshAgent>();
+        //agent.GetComponentInParent<NavMeshAgent>();
     }
     public void Defeated()
     {

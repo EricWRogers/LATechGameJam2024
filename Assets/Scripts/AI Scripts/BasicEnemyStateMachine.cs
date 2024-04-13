@@ -9,35 +9,33 @@ using static UnityEditor.VersionControl.Asset;
 public class BasicEnemyStateMachine : SimpleStateMachine
 {
     //States
-    public PatrolState patrol;
-    public ChaseState chase;
-    public bool LOS;
+    public MoveInRangeState moveIn;
+    public AttackState attack;
 
-    //Patrol var
-    public List<Transform> patrolPoints;
-    public List<Transform> targetPos;
+    public bool LOS;
+    public Transform target;
+    public float attackRange;
+    public float attackZone;
 
     private void Awake()
     {
-        states.Add(patrol);
-        states.Add(chase);
+        states.Add(moveIn);
+        states.Add(attack);
 
         foreach (SimpleState s in states)
             s.stateMachine = this;
 
-        ChangeState(nameof(PatrolState));
+        ChangeState(nameof(MoveInRangeState));
     }
 
     void Start()
     {
-
     }
-
     void Update()
     {
-        targetPos = gameObject.GetComponent<FOV>().visibleTargets;
+
         LOS = gameObject.GetComponent<FOV>().targetsInSight;
 
     }
-    
+
 }
