@@ -29,6 +29,16 @@ public class WheatlyTestScript : MonoBehaviour
             Debug.Log("HIT!");
             anim.Play("WheatlyShoot");
         }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("HIT!");
+            anim.Play("WheatlyPunch");
+        }
+        else if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Debug.Log("HIT!");
+            anim.Play("WheatlyDab");
+        }
         else
         {
             Invoke("Invoker", 5f);
