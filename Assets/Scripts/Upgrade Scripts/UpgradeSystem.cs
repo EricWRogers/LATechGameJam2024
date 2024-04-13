@@ -112,7 +112,7 @@ public class UpgradeSystem : MonoBehaviour
     void Update()
     {
         //SetUpgradeText();
-        ActivateEffects();
+        //ActivateEffects();
     }
 
 }

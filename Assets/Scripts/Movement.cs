@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     private RaycastHit m_info;
     public LayerMask mask;
     public GameObject groundCheck;
+    public UpgradeSystem upgradeSystem;
 
 
 
@@ -57,6 +58,7 @@ public class Movement : MonoBehaviour
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+        upgradeSystem.ActivateEffects();
     }
 
     void FixedUpdate()
