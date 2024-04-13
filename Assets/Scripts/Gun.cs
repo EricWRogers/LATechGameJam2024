@@ -34,7 +34,7 @@ public class Gun : MonoBehaviour
     {
         if (!pausedGame.isGamePaused)
         {
-            Instantiate(_bullet, transform.position,transform.rotation);
+            Instantiate(_bullet, transform.parent.position, transform.parent.rotation);
             soundPlayer.Play();
         }
     }

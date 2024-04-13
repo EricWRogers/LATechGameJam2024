@@ -4,24 +4,39 @@ using UnityEngine;
 
 public class Enemy_Gun : MonoBehaviour
 {
+    public float timer = 5.0f;
     public GameObject Bullet_Enemy;
-    public bool stopSpawing = false;
-    public float spawnTime;
-    public float spawnDelay;
+    public float bulletTime;
+    public Transform spawnPoint;
+
+
 
     void Start()
     {
-        InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
+       
     }
 
-
-    public void SpawnObject()
+    void Update()
     {
-        Instantiate(Bullet_Enemy, transform.position, Quaternion.identity);
-        if (stopSpawing)
-        {
-            CancelInvoke("SpawnObject");
-        }
+        
+        ShootAtPlayer();
+
+
+    }
+    void ShootAtPlayer()
+    {
+        bulletTime -= Time.deltaTime;
+
+        if (bulletTime > 0) return;
+
+        bulletTime = timer;
+
+        GameObject bulletObj = Instantiate(Bullet_Enemy, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
     }
 
+
+    
 }
+
+
+
