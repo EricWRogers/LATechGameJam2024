@@ -52,7 +52,7 @@ public class Movement : MonoBehaviour
             moveSpeed = baseSpeed;   
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse1)) && isGrounded)
         {
 
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
