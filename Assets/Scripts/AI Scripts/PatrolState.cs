@@ -46,6 +46,11 @@ public class PatrolState : SimpleState
         {
             points = 0;
         }
+
+        if(((BasicEnemyStateMachine)stateMachine).LOS == true)
+        {
+            stateMachine.ChangeState(nameof(ChaseState));
+        }
         /* foreach (Transform point in ((BasicEnemyStateMachine)stateMachine).patrolPoints)
                 {
 

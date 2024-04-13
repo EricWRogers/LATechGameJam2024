@@ -42,6 +42,16 @@ public class ChaseState : SimpleState
         {
             Points = 0;
         }
+        if (((BasicEnemyStateMachine)stateMachine).LOS == false && agent.remainingDistance < 1)
+        {
+            stateMachine.ChangeState(nameof(PatrolState));
 
+        }
+
+    }
+    public override void OnExit()
+    {
+        base.OnExit();
+        
     }
 }
