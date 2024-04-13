@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 4675242459906578963}
   - component: {fileID: 9010230052708564299}
   - component: {fileID: 7669803644366310424}
+  - component: {fileID: 2488344022149906058}
   - component: {fileID: 2085544570794341644}
   - component: {fileID: 2892953045110323924}
   m_Layer: 7
@@ -658,6 +659,7 @@ Transform:
   m_Children:
   - {fileID: 2081971896889571437}
   - {fileID: 4555584970506460281}
+  - {fileID: 1043103988521177512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8672050492116937852
@@ -770,9 +772,24 @@ MonoBehaviour:
   isGrounded: 0
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   groundCheck: {fileID: 5451896997524376343}
-  mag: 0
+  upgradeSystem: {fileID: 2488344022149906058}
+--- !u!114 &2488344022149906058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5986635869959824606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8114447ccbdcf9a4f9b4de2d2d33e410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: []
+  activate: 0
+  upgradeCount: 0
 --- !u!54 &2085544570794341644
 Rigidbody:
   m_ObjectHideFlags: 0
