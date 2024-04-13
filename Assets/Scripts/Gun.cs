@@ -1,9 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public PauseMenu pausedGame;
-
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10f;
@@ -20,19 +20,9 @@ public class Gun : MonoBehaviour
 
 
     // Update is called once per frame
-
-    private void Start()
-    {
-        UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
-
-        if (pausedGame == null)
-        {
-            pausedGame = new PauseMenu();
-        }
-    }
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 0 && pausedGame != null && pausedGame.isGamePaused == false)
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 0)
         {
             ShootPrefab();
             //ShootRaycast();
@@ -41,13 +31,13 @@ public class Gun : MonoBehaviour
 
         }
 
-        if (Input.GetButton("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 1 && pausedGame != null && pausedGame.isGamePaused == false)
+        if(Input.GetButton("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 1)
         {
             ShootPrefab();
             ammo--;
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && pausedGame != null && pausedGame.isGamePaused == false)
+        if (Input.GetKeyDown(KeyCode.R))
         {
             ammo = 10;
         }

@@ -24,6 +24,7 @@ public class Movement : MonoBehaviour
     public LayerMask mask;
     public GameObject groundCheck;
     public UpgradeSystem upgradeSystem;
+    public float mag;
 
 
 
@@ -58,6 +59,8 @@ public class Movement : MonoBehaviour
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+
+        mag = Vector3.Magnitude(transform.position);
         upgradeSystem.ActivateEffects();
     }
 
@@ -91,7 +94,7 @@ public class Movement : MonoBehaviour
 
         Vector3 velocity = rb.velocity;
 
-        if (input.magnitude > 0.5f)
+        if (mag > 0.5f)
         {
             Vector3 velocityChange = targetVelocity - velocity;
 
