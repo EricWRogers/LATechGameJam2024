@@ -26,32 +26,62 @@ public class AttackState : SimpleState
         time.StartTimer(2, true);
         if (attack == null)
             attack = new UnityEvent();
-        agent.SetDestination(((RangedEnemyStateMachine)stateMachine).transform.position);
+        if(stateMachine is BasicEnemyStateMachine)
+            agent.SetDestination(((BasicEnemyStateMachine)stateMachine).transform.position);
+
+        if (stateMachine is RangedEnemyStateMachine)
+            agent.SetDestination(((RangedEnemyStateMachine)stateMachine).transform.position);
 
     }
 
     public override void UpdateState(float dt)
     {
-        ((RangedEnemyStateMachine)stateMachine).transform.LookAt(((RangedEnemyStateMachine)stateMachine).target);
-        Debug.Log("" + time.timeLeft);
-        if (((RangedEnemyStateMachine)stateMachine).LOS == true && !isAttacking)
+        if (stateMachine is RangedEnemyStateMachine)
         {
-            Debug.Log("Attaking");
-            isAttacking = true;
-            attack.Invoke();
-            
-        }
-        if (((RangedEnemyStateMachine)stateMachine).LOS == false)
-        {
-            time.autoRestart = false;
-            if(time.timeLeft <= 0)
+            ((RangedEnemyStateMachine)stateMachine).transform.LookAt(((RangedEnemyStateMachine)stateMachine).target);
+            if (((RangedEnemyStateMachine)stateMachine).LOS == true && !isAttacking)
             {
-                isAttacking = false;
-                stopAttacking.Invoke();
-                stateMachine.ChangeState(nameof(MoveInRangeState));
-            }
+                Debug.Log("Attaking");
+                isAttacking = true;
+                attack.Invoke();
             
+            }
+            if (((RangedEnemyStateMachine)stateMachine).LOS == false)
+            {
+                time.autoRestart = false;
+                if(time.timeLeft <= 0)
+                {
+                    isAttacking = false;
+                    stopAttacking.Invoke();
+                    stateMachine.ChangeState(nameof(MoveInRangeState));
+                }
+            
+            }
         }
+        if (stateMachine is BasicEnemyStateMachine)
+        {
+            ((BasicEnemyStateMachine)stateMachine).transform.LookAt(((BasicEnemyStateMachine)stateMachine).target);
+            if (((BasicEnemyStateMachine)stateMachine).LOS == true && !isAttacking)
+            {
+                Debug.Log("Attaking");
+                isAttacking = true;
+                attack.Invoke();
+
+            }
+            if (((BasicEnemyStateMachine)stateMachine).LOS == false)
+            {
+                time.autoRestart = false;
+                if (time.timeLeft <= 0)
+                {
+                    isAttacking = false;
+                    stopAttacking.Invoke();
+                    stateMachine.ChangeState(nameof(MoveInRangeState));
+                }
+
+            }
+        }
+
+
 
 
 
