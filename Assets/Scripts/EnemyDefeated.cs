@@ -10,6 +10,8 @@ public class EnemyDefeated : MonoBehaviour
     private ParticleSystem particle;
     private Light light;
 
+    public ParticleSystem spareParticle;
+
     bool shrink;
 
     private void Start()
@@ -21,6 +23,10 @@ public class EnemyDefeated : MonoBehaviour
     }
     public void Defeated()
     {
+        if(spareParticle != null)
+        {
+            spareParticle.enableEmission = false;
+        }
         light.enabled = false;
         anim.enabled = false;
         particle.enableEmission = false;
