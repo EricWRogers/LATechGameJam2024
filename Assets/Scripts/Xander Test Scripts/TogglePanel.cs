@@ -5,6 +5,7 @@ using UnityEngine;
 public class TogglePanel : MonoBehaviour
 {
     public GameObject panel;
+    public GameObject upgrade;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,15 @@ public class TogglePanel : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             panel.SetActive(!panel.active);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            upgrade.GetComponent<UpgradeHolder>().upgrade.PickUp();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            upgrade.GetComponent<UpgradeHolder>().upgrade.Drop();
         }
     }
 }
