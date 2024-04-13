@@ -658,7 +658,6 @@ Transform:
   m_Children:
   - {fileID: 2081971896889571437}
   - {fileID: 4555584970506460281}
-  - {fileID: 1043103988521177512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8672050492116937852
@@ -763,16 +762,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  baseSpeed: 8
-  maxVec: 5
-  sprintSpeedMultiplier: 3
+  baseSpeed: 5
+  maxVec: 10
+  sprintSpeedMultiplier: 5
   jump: {x: 0, y: 0, z: 0}
-  jumpForce: 6
+  jumpForce: 2
   isGrounded: 0
   mask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   groundCheck: {fileID: 5451896997524376343}
+  mag: 0
 --- !u!54 &2085544570794341644
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -982,7 +982,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2909b3cdc7ef87eaaa1ae8b5df9cd0ee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.025
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2909b3cdc7ef87eaaa1ae8b5df9cd0ee,
         type: 3}
@@ -992,7 +992,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2909b3cdc7ef87eaaa1ae8b5df9cd0ee,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.219
+      value: -0.217
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2909b3cdc7ef87eaaa1ae8b5df9cd0ee,
         type: 3}
