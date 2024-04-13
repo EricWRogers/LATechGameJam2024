@@ -10,6 +10,8 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
+        
         if (pausedGame == null)
         {
             pausedGame = new PauseMenu();
@@ -32,7 +34,7 @@ public class Gun : MonoBehaviour
     {
         if (!pausedGame.isGamePaused)
         {
-            Instantiate(_bullet, transform.position,transform.rotation);
+            Instantiate(_bullet, transform.parent.position, transform.parent.rotation);
             soundPlayer.Play();
         }
     }
