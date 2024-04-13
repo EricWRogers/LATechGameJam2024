@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class WinMenu : MonoBehaviour
 {
-    public bool isGamePaused = false;
+    public bool isPlayerDead = false;
 
-    public GameObject pauseMenuUI;
+    public GameObject winSection;
 
     public GameObject healthBar;
     public GameObject PowerUpSection;
@@ -17,49 +15,37 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        //pauseMenuUI.SetActive(false);
+        winSection.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.P))
         {
-            if(isGamePaused)
+            if(isPlayerDead)
             {
-                Resume();
-            }else
-            {
-                Pause();
+                Win();
             }
         }   
     }
 
-    public void Resume()
+    public void Win()
     {
-        Debug.Log("Resume Button Was Hit");
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        pauseMenuUI.SetActive(false);
-        healthBar.SetActive(true);
-        GunSection.SetActive(true);
-        PowerUpSection.SetActive(true);
-        TMSection.SetActive(true);
-        Time.timeScale = 1.0f;
-        isGamePaused = false;
-    }
-
-    public void Pause()
-    {
+        Debug.Log("You have WON!");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        pauseMenuUI.SetActive(true);
+        winSection.SetActive(true);
         healthBar.SetActive(false);
         GunSection.SetActive(false);
         PowerUpSection.SetActive(false);
         TMSection.SetActive(false);
-        //Time.timeScale = 0.0f;
-        isGamePaused = true;
+        Time.timeScale = 1.0f;
+    }
+
+    public void Retry()
+    {
+        //SceneManager.LoadSceneAysnc(1);
     }
 
     public void LoadMenu()
