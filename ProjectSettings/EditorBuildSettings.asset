@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu/MainMenu.unity
     guid: 3f4e2dda7c4339d448fdbb5041cd43bd
+  - enabled: 1
+    path: Assets/Scenes/EricTest.unity
+    guid: bacd8833d36480cd2bd7c3c482193ef3
   m_configObjects: {}
