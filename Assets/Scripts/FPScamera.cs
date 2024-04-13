@@ -47,6 +47,12 @@ public class FPScamera : MonoBehaviour
 
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
     }
+
+    public void DestroyPlayerLooking()
+    {
+        Destroy(this);
+    }
+
     private void StopMouseMovement(bool stop)
     {
         if (stop)
