@@ -141,10 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308a963a40cedcd458c5c502bbd574dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet_spd: 0
-  _fireRate: 1
-  _cycleTime: 0
-  _bullet: {fileID: 0}
+  rb: {fileID: 0}
+  launchForce: 50
 --- !u!1 &262545945
 GameObject:
   m_ObjectHideFlags: 0

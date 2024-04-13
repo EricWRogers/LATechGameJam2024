@@ -59,7 +59,7 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(CalculateMovement(moveSpeed), ForceMode.Impulse);
+        rb.AddForce(CalculateMovement(moveSpeed), ForceMode.VelocityChange);
     }
 
     Vector3 CalculateMovement(float _speed)
