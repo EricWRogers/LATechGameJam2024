@@ -25,11 +25,13 @@ public class BasicEnemyStateMachine : SimpleStateMachine
         foreach (SimpleState s in states)
             s.stateMachine = this;
 
-        ChangeState(nameof(MoveInRangeState));
     }
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        ChangeState(nameof(MoveInRangeState));
+
     }
     void Update()
     {

@@ -15,7 +15,7 @@ public class AttackState : SimpleState
     public UnityEvent stopAttacking;
     public NavMeshAgent agent;
     private bool playerInRange;
-    private bool isAttacking;
+    public bool isAttacking;
 
 
 
