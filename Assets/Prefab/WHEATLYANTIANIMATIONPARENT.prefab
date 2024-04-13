@@ -118,6 +118,55 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &826272931330445551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518044151176582764}
+  - component: {fileID: 7452190622661555273}
+  m_Layer: 0
+  m_Name: Bullet_Spawn_Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1518044151176582764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826272931330445551}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2.0300002, y: -0.06099999, z: -1.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3671452774733950454}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &7452190622661555273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826272931330445551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec3019e8cfb31e49a9e2bae87fb9189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1
+  Bullet_Enemy: {fileID: 8868396285415600353, guid: 21f491fb1488ada4fbb80ac07f44cdf0,
+    type: 3}
+  bulletTime: 3
+  spawnPoint: {fileID: 1518044151176582764}
 --- !u!1 &3352251508071434801
 GameObject:
   m_ObjectHideFlags: 0
@@ -14750,6 +14799,55 @@ Transform:
   - {fileID: 3671452774733950454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5645874172530982104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2951915193529807091}
+  - component: {fileID: 1930949124848058434}
+  m_Layer: 0
+  m_Name: Bullet_Spawn_Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2951915193529807091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645874172530982104}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2.183, y: -0.061, z: 1.455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3671452774733950454}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1930949124848058434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645874172530982104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec3019e8cfb31e49a9e2bae87fb9189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1
+  Bullet_Enemy: {fileID: 8868396285415600353, guid: 21f491fb1488ada4fbb80ac07f44cdf0,
+    type: 3}
+  bulletTime: 3
+  spawnPoint: {fileID: 2951915193529807091}
 --- !u!1 &8141573927705341561
 GameObject:
   m_ObjectHideFlags: 0
@@ -14778,14 +14876,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8141573927705341561}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9998808, z: -0, w: 0.015443528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2486712029446128116}
+  - {fileID: 2951915193529807091}
+  - {fileID: 1518044151176582764}
   m_Father: {fileID: 258969779456288792}
-  m_LocalEulerAnglesHint: {x: 0, y: 178.23, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4195191279583553445
 Animator:
   serializedVersion: 5
@@ -14887,7 +14987,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
