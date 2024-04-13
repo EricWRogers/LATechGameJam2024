@@ -3,19 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using SuperPupSystems.Helper;
 using SuperPupSystems.StateMachine;
+using UnityEngine.AI;
+using Unity.VisualScripting;
 
 [System.Serializable]
 public class ChaseState : SimpleState
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public NavMeshAgent agent;
+    private Vector3 destination;
 
-    // Update is called once per frame
-    void Update()
+    float delay = 0;
+    int Points = 0;
+
+    public override void OnStart()
     {
-        
+
+        base.OnStart();
+        destination = ((BasicEnemyStateMachine)stateMachine).targetPos[0].position;
+        agent.SetDestination(destination);
+    }
+    
+    public override void UpdateState(float dt)
+    {
+        delay += Time.deltaTime;
+        if (delay > 3f && Points < ((BasicEnemyStateMachine)stateMachine).targetPos.Count)
+        {
+
+            if (agent.remainingDistance < .001)
+            {
+                Debug.Log("Arrived." + Points);
+
+                agent.SetDestination(((BasicEnemyStateMachine)stateMachine).targetPos[Points].position);
+                delay = 0;
+                Points++;
+            }
+        }
+        if (Points >= ((BasicEnemyStateMachine)stateMachine).targetPos.Count)
+        {
+            Points = 0;
+        }
+
     }
 }
