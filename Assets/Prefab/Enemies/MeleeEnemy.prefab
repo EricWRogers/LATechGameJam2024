@@ -16,13 +16,14 @@ GameObject:
   - component: {fileID: 4248249791927364115}
   - component: {fileID: 2729821521683533348}
   - component: {fileID: 7549187139313599245}
+  - component: {fileID: -8911272862907440650}
   m_Layer: 3
   m_Name: MeleeEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7823411308859772167
 Transform:
   m_ObjectHideFlags: 0
@@ -224,9 +225,42 @@ MonoBehaviour:
       m_Calls: []
   outOfHealth:
     m_PersistentCalls:
-      m_Calls: []
-  maxHealth: 50
-  currentHealth: 50
+      m_Calls:
+      - m_Target: {fileID: 7549187139313599245}
+        m_TargetAssemblyTypeName: SuperPupSystems.Helper.Health, Assembly-CSharp
+        m_MethodName: DestroyGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxHealth: 10
+  currentHealth: 10
+--- !u!135 &-8911272862907440650
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7049630714884884282}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.7843323
+  m_Center: {x: -1.1538391, y: 0, z: 0.63049316}
 --- !u!1001 &168929384055082720
 PrefabInstance:
   m_ObjectHideFlags: 0
