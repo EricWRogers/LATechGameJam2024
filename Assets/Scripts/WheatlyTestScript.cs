@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SuperPupSystems.Helper;
 
 public class WheatlyTestScript : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class WheatlyTestScript : MonoBehaviour
 
     public ParticleSystem particleR;
     public ParticleSystem particleL;
+
+    public GameObject target;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +47,10 @@ public class WheatlyTestScript : MonoBehaviour
             Invoke("Invoker", 5f);
         }*/
 
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            gameObject.GetComponent<Health>().Damage(10);
+        }
     }
 
     public void Hurt()
