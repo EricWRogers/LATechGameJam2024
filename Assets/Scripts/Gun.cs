@@ -67,4 +67,9 @@ public class Gun : MonoBehaviour
             }
         }
     }
+
+    public void DestroyShooting()
+    {
+        Destroy(this);
+    }
 }
