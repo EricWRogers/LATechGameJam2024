@@ -59,8 +59,9 @@ public class Movement : MonoBehaviour
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
-        upgradeSystem.ActivateEffects();
+
         mag = Vector3.Magnitude(transform.position);
+        upgradeSystem.ActivateEffects();
     }
 
     void FixedUpdate()
