@@ -750,7 +750,7 @@ MonoBehaviour:
   sensitivity: 2
   player: {fileID: 2379982010731505965}
   playerCamera: {fileID: 8352364989529367057}
-  pausedGame: {fileID: 0}
+  pausedGame: {fileID: 811810960492852908}
 --- !u!114 &7669803644366310424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,6 +1223,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f35632d41f56f744a9e3f322561f0bad, type: 3}
+--- !u!114 &811810960492852908 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8293015961041386500, guid: f35632d41f56f744a9e3f322561f0bad,
+    type: 3}
+  m_PrefabInstance: {fileID: 8670159154372266664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56c1d7c3544d9b458d67523130351dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1043103988521177512 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8514985683791436544, guid: f35632d41f56f744a9e3f322561f0bad,
