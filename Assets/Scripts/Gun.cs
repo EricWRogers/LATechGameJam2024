@@ -3,6 +3,7 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     public PauseMenu pausedGame;
+    public AudioSource audio;
 
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -36,13 +37,14 @@ public class Gun : MonoBehaviour
         {
             ShootPrefab();
             //ShootRaycast();
-
+            audio.Play();
             ammo--;
 
         }
 
         if (Input.GetButton("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 1 && pausedGame != null && pausedGame.isGamePaused == false)
         {
+            audio.Play();
             ShootPrefab();
             ammo--;
         }
