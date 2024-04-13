@@ -222,7 +222,31 @@ MonoBehaviour:
       m_Calls: []
   hurt:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 295219872549136916}
+        m_TargetAssemblyTypeName: WheatlyTestScript, Assembly-CSharp
+        m_MethodName: Hurt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7226909424032664036}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   outOfHealth:
     m_PersistentCalls:
       m_Calls:
@@ -329,9 +353,27 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a19d05f66612d24fa4f197efb4691a5, type: 3}
+--- !u!114 &295219872549136916 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 450637631455749364, guid: 2a19d05f66612d24fa4f197efb4691a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 168929384055082720}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb27f4e48b254443a97549a406d112c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &385525910103647073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 504827178707676545, guid: 2a19d05f66612d24fa4f197efb4691a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 168929384055082720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7226909424032664036 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7355235492400023300, guid: 2a19d05f66612d24fa4f197efb4691a5,
     type: 3}
   m_PrefabInstance: {fileID: 168929384055082720}
   m_PrefabAsset: {fileID: 0}
