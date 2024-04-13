@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    public PauseMenu pausedGame;
+
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10f;
@@ -18,11 +20,18 @@ public class Gun : MonoBehaviour
 
     public int fireMode = 0;
 
-
+    private void Start()
+    {
+        UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
+        if(pausedGame == null)
+        {
+            pausedGame = new PauseMenu();
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 0)
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 0 && pausedGame.isGamePaused == false)
         {
             ShootPrefab();
             //ShootRaycast();
@@ -31,13 +40,13 @@ public class Gun : MonoBehaviour
 
         }
 
-        if(Input.GetButton("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 1)
+        if(Input.GetButton("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 1 && pausedGame.isGamePaused == false)
         {
             ShootPrefab();
             ammo--;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && pausedGame.isGamePaused == false)
         {
             ammo = 10;
         }
@@ -66,5 +75,10 @@ public class Gun : MonoBehaviour
                 Debug.Log("Hit!");
             }
         }
+    }
+
+    public void DestroyShooting()
+    {
+        Destroy(this);
     }
 }
