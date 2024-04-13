@@ -9,12 +9,12 @@ using UnityEngine.AI;
 public class MoveInRangeState : SimpleState
 {
     public NavMeshAgent agent;
-    private Vector3 target;
+    public Transform target;
 
     public override void OnStart()
     {
         base.OnStart();
-        //target = 
+        agent.SetDestination(target.position);
     }
 
     public override void UpdateState(float dt)

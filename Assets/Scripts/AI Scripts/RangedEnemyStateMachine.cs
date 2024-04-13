@@ -8,12 +8,9 @@ using static UnityEditor.VersionControl.Asset;
 public class RangedEnemyStateMachine : SimpleStateMachine
 {
     public MoveInRangeState moveIn;
-    public ShootState shoot;
-    public bool LOS;
+    public AttackState shoot;
+    public Transform target;
 
-    //Patrol var
-    public List<Transform> patrolPoints;
-    public List<Transform> targetPos;
 
     private void Awake()
     {
@@ -23,7 +20,7 @@ public class RangedEnemyStateMachine : SimpleStateMachine
         foreach (SimpleState s in states)
             s.stateMachine = this;
 
-        ChangeState(nameof(PatrolState));
+        ChangeState(nameof(moveIn));
     }
 
     void Start()
@@ -33,8 +30,8 @@ public class RangedEnemyStateMachine : SimpleStateMachine
 
     void Update()
     {
-        targetPos = gameObject.GetComponent<FOV>().visibleTargets;
-        LOS = gameObject.GetComponent<FOV>().targetsInSight;
+        
+        
 
     }
 
