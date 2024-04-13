@@ -13,6 +13,8 @@ public class EnemyDefeated : MonoBehaviour
     public ParticleSystem particleExplode;
     public ParticleSystem spareParticle;
 
+    public MonoBehaviour brain;
+
     bool shrink;
 
     private void Start()
@@ -21,6 +23,7 @@ public class EnemyDefeated : MonoBehaviour
         particle = GetComponentInChildren<ParticleSystem>();
         anim = GetComponentInChildren<Animator>();
         rigi = GetComponent<Rigidbody>();
+        
         //agent.GetComponentInParent<NavMeshAgent>();
     }
     public void Defeated()
@@ -31,6 +34,7 @@ public class EnemyDefeated : MonoBehaviour
             spareParticle.enableEmission = false;
         }
         agent.enabled = false;
+        brain.enabled = false;
         light.enabled = false;
         anim.enabled = false;
         particle.enableEmission = false;

@@ -1705,46 +1705,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 247316143377488848, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 247316143377488848, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 247316143377488848, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1051947376}
-    - target: {fileID: 247316143377488848, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 247316143377488848, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 247316143377488848, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 247316143377488848, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: '"WheatlyDamaged"'
-      objectReference: {fileID: 0}
-    - target: {fileID: 247316143377488848, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
-        type: 3}
-      propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5922751998574900180, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
         type: 3}
       propertyPath: m_Name
@@ -1805,12 +1765,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 018b5b8ba8795274d80c5be7fe0c58fd, type: 3}
---- !u!198 &1051947376 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4818705196240145299, guid: 018b5b8ba8795274d80c5be7fe0c58fd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1051947375}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1109155083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,6 +1907,74 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 618692523}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1308721123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_Name
+      value: WheatlyHenchAI (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 422.89188
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 38.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 232.14746
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
 --- !u!1 &1319019768
 GameObject:
   m_ObjectHideFlags: 0
@@ -7650,3 +7672,4 @@ SceneRoots:
   - {fileID: 1109155085}
   - {fileID: 9156109251317039426}
   - {fileID: 1051947375}
+  - {fileID: 1308721123}

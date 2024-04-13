@@ -15395,6 +15395,7 @@ MonoBehaviour:
   agent: {fileID: 5125197041916324445}
   particleExplode: {fileID: 5399861369994223187}
   spareParticle: {fileID: 0}
+  brain: {fileID: 4499371333322747267}
 --- !u!54 &6771432542714772946
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20795,7 +20796,7 @@ GameObject:
   - component: {fileID: 6268703156147596302}
   m_Layer: 0
   m_Name: WheatlyHenchAI
-  m_TagString: Untagged
+  m_TagString: CANBREAK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20851,7 +20852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   states: []
-  patrol:
+  moveIn:
     stateStart:
       m_PersistentCalls:
         m_Calls: []
@@ -20862,8 +20863,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     stateMachine: {fileID: 0}
-    agent: {fileID: 5125197041916324445}
-  chase:
+    agent: {fileID: 0}
+  attack:
     stateStart:
       m_PersistentCalls:
         m_Calls: []
@@ -20874,15 +20875,19 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     stateMachine: {fileID: 0}
-    agent: {fileID: 5125197041916324445}
-    lastKnownPos: {x: 0, y: 0, z: 0}
-    isDone: 0
+    time: {fileID: 0}
+    attack:
+      m_PersistentCalls:
+        m_Calls: []
+    stopAttacking:
+      m_PersistentCalls:
+        m_Calls: []
+    agent: {fileID: 0}
+    isAttacking: 0
   LOS: 0
-  patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  targetPos: []
+  target: {fileID: 0}
+  attackRange: 0
+  attackZone: 0
 --- !u!114 &6268703156147596302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25917,7 +25922,7 @@ GameObject:
   - component: {fileID: 8602333916017769720}
   m_Layer: 0
   m_Name: WHEATLYHENCH
-  m_TagString: Untagged
+  m_TagString: CANBREAK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
