@@ -51,13 +51,13 @@ public class FPScamera : MonoBehaviour
     {
         if (stop)
         {
-            Cursor.lockState = CursorLockMode.Locked; 
-            Cursor.visible = false; 
+            Cursor.lockState = CursorLockMode.None; 
+            Cursor.visible = true; 
         }
         else
         {
-            Cursor.lockState = CursorLockMode.None; 
-            Cursor.visible = true; 
+            Cursor.lockState = CursorLockMode.Locked; 
+            Cursor.visible = false; 
         }
     }
 }
