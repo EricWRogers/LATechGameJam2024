@@ -5,6 +5,7 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     public GameObject _bullet;
+    public AudioSource soundPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class Gun : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Instantiate(_bullet, transform.position,transform.rotation);
+            soundPlayer.Play();
         }
     }
 }
