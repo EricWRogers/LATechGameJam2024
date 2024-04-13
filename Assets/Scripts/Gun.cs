@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Gun : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private float launchForce = 50f;
+    public GameObject _bullet;
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.forward * launchForce;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Instantiate(_bullet, transform.position,transform.rotation);
+        }
     }
 }
