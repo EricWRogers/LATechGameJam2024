@@ -658,6 +658,7 @@ Transform:
   m_Children:
   - {fileID: 2081971896889571437}
   - {fileID: 4555584970506460281}
+  - {fileID: 1043103988521177512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8672050492116937852
@@ -748,7 +749,7 @@ MonoBehaviour:
   sensitivity: 2
   player: {fileID: 2379982010731505965}
   playerCamera: {fileID: 8352364989529367057}
-  pausedGame: {fileID: 0}
+  pausedGame: {fileID: 811810960492852908}
 --- !u!114 &7669803644366310424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,9 +771,9 @@ MonoBehaviour:
   isGrounded: 0
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   groundCheck: {fileID: 5451896997524376343}
-  mag: 0
+  upgradeSystem: {fileID: 0}
 --- !u!54 &2085544570794341644
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1206,6 +1207,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f35632d41f56f744a9e3f322561f0bad, type: 3}
+--- !u!114 &811810960492852908 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8293015961041386500, guid: f35632d41f56f744a9e3f322561f0bad,
+    type: 3}
+  m_PrefabInstance: {fileID: 8670159154372266664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56c1d7c3544d9b458d67523130351dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1043103988521177512 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8514985683791436544, guid: f35632d41f56f744a9e3f322561f0bad,
