@@ -5,12 +5,10 @@ using SuperPupSystems.Helper;
 using SuperPupSystems.StateMachine;
 using UnityEngine.AI;
 using static UnityEditor.VersionControl.Asset;
-
-public class BasicEnemyStateMachine : SimpleStateMachine
+public class RangedEnemyStateMachine : SimpleStateMachine
 {
-    //States
-    public PatrolState patrol;
-    public ChaseState chase;
+    public MoveInRangeState moveIn;
+    public ShootState shoot;
     public bool LOS;
 
     //Patrol var
@@ -19,8 +17,8 @@ public class BasicEnemyStateMachine : SimpleStateMachine
 
     private void Awake()
     {
-        states.Add(patrol);
-        states.Add(chase);
+        states.Add(shoot);
+        states.Add(moveIn);
 
         foreach (SimpleState s in states)
             s.stateMachine = this;
@@ -39,5 +37,5 @@ public class BasicEnemyStateMachine : SimpleStateMachine
         LOS = gameObject.GetComponent<FOV>().targetsInSight;
 
     }
-    
+
 }

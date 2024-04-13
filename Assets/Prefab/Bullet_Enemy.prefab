@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 20
+  speed: 40
   lifeTime: 10
   destroyOnImpact: 1
   hitTarget:
@@ -125,6 +125,6 @@ MonoBehaviour:
       m_Calls: []
   mask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 129
   tags:
   - Player
