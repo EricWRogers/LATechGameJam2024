@@ -4,43 +4,89 @@ using UnityEngine;
 using SuperPupSystems.Helper;
 using SuperPupSystems.StateMachine;
 using UnityEngine.AI;
-using Unity.VisualScripting;
 using UnityEngine.Events;
-using System.Threading;
 using static UnityEngine.GraphicsBuffer;
 
 [System.Serializable]
 public class AttackState : SimpleState
 {
-    public UnityEvent attack;    
+    public Timer time;
+    public UnityEvent attack;  
+    public UnityEvent stopAttacking;
     public NavMeshAgent agent;
-    public float attackRange;
     private bool playerInRange;
-    private bool isAttacking;
+    public bool isAttacking;
+
 
 
     public override void OnStart()
     {
         Debug.Log("Attack State");
         base.OnStart();
+        time.StartTimer(2, true);
         if (attack == null)
             attack = new UnityEvent();
-        ((RangedEnemyStateMachine)stateMachine).transform.LookAt(((RangedEnemyStateMachine)stateMachine).target);
-        agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
+        if(stateMachine is BasicEnemyStateMachine)
+            agent.SetDestination(((BasicEnemyStateMachine)stateMachine).transform.position);
+
+        if (stateMachine is RangedEnemyStateMachine)
+            agent.SetDestination(((RangedEnemyStateMachine)stateMachine).transform.position);
 
     }
 
     public override void UpdateState(float dt)
     {
-        playerInRange = Physics.CheckSphere(((RangedEnemyStateMachine)stateMachine).transform.position, attackRange, LayerMask.GetMask("Player"));
-        if(playerInRange && !isAttacking)
+        if (stateMachine is RangedEnemyStateMachine)
         {
-            agent.SetDestination(((RangedEnemyStateMachine)stateMachine).transform.position);
-            isAttacking = true;
-            attack.Invoke();
+            ((RangedEnemyStateMachine)stateMachine).transform.LookAt(((RangedEnemyStateMachine)stateMachine).target);
+            if (((RangedEnemyStateMachine)stateMachine).LOS == true && !isAttacking)
+            {
+                Debug.Log("Attaking");
+                isAttacking = true;
+                attack.Invoke();
+            
+            }
+            if (((RangedEnemyStateMachine)stateMachine).LOS == false)
+            {
+                time.autoRestart = false;
+                if(time.timeLeft <= 0)
+                {
+                    isAttacking = false;
+                    stopAttacking.Invoke();
+                    stateMachine.ChangeState(nameof(MoveInRangeState));
+                }
+            
+            }
         }
-        
+        if (stateMachine is BasicEnemyStateMachine)
+        {
+            ((BasicEnemyStateMachine)stateMachine).transform.LookAt(((BasicEnemyStateMachine)stateMachine).target);
+            if (((BasicEnemyStateMachine)stateMachine).LOS == true && !isAttacking)
+            {
+                Debug.Log("Attaking");
+                isAttacking = true;
+                attack.Invoke();
+
+            }
+            if (((BasicEnemyStateMachine)stateMachine).LOS == false)
+            {
+                time.autoRestart = false;
+                if (time.timeLeft <= 0)
+                {
+                    isAttacking = false;
+                    stopAttacking.Invoke();
+                    stateMachine.ChangeState(nameof(MoveInRangeState));
+                }
+
+            }
+        }
+
+
+
+
+
     }
+    
     public override void OnExit()
     {
         base.OnExit();

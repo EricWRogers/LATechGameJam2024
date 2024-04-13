@@ -9,20 +9,40 @@ using UnityEngine.AI;
 public class MoveInRangeState : SimpleState
 {
     public NavMeshAgent agent;
-    private bool inRange;
+
 
     public override void OnStart()
     {
         base.OnStart();
-        agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
+        if (stateMachine is RangedEnemyStateMachine)
+        {
+            agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
+        }
+
+        if (stateMachine is BasicEnemyStateMachine)
+        {
+            agent.SetDestination(((BasicEnemyStateMachine)stateMachine).target.position);
+        }
     }
 
     public override void UpdateState(float dt)
     {
-        agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
-        if (((RangedEnemyStateMachine)stateMachine).LOS)
+        if (stateMachine is RangedEnemyStateMachine)
         {
-            stateMachine.ChangeState(nameof(AttackState));
+            agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
+            if (((RangedEnemyStateMachine)stateMachine).LOS)
+            {
+                stateMachine.ChangeState(nameof(AttackState));
+            }
+        }
+
+        if (stateMachine is BasicEnemyStateMachine)
+        {
+            agent.SetDestination(((BasicEnemyStateMachine)stateMachine).target.position);
+            if (((BasicEnemyStateMachine)stateMachine).LOS)
+            {
+                stateMachine.ChangeState(nameof(AttackState));
+            }
         }
     }
 

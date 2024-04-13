@@ -41,12 +41,18 @@ public class FPScamera : MonoBehaviour
 
 
         rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, -90f, 30f);
+        rotationX = Mathf.Clamp(rotationX, -90f, 60f);
         
 
 
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
     }
+
+    public void DestroyPlayerLooking()
+    {
+        Destroy(this);
+    }
+
     private void StopMouseMovement(bool stop)
     {
         if (stop)

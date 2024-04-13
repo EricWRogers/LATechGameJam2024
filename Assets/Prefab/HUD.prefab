@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2353869243978559074}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3379270761602602422}
+        m_TargetAssemblyTypeName: WinMenu, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1676159886463562212
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textHeader: 'Timeleft : '
   timer: {fileID: 520096624712525707}
-  startTime: 300
+  startTime: 10
   text: {fileID: 3398942446047226770}
 --- !u!1 &2349101257728431063
 GameObject:
@@ -1078,7 +1090,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8007729382311947069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3379270761602602422}
+        m_TargetAssemblyTypeName: WinMenu, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3256032503025048372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2576,7 +2600,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6933220328953727050}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1915527667047518538}
+        m_TargetAssemblyTypeName: LoseMenu, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6294167265664777735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,7 +2733,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4618054274713695768}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1915527667047518538}
+        m_TargetAssemblyTypeName: LoseMenu, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6661716545182748722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3588,7 +3636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211464ed74470614da5a995c22f3835b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerDead: 0
+  didSurviveTime: 0
+  playerHealth: {fileID: 0}
   winSection: {fileID: 2530256865054382465}
   healthBar: {fileID: 1676159886463562212}
   PowerUpSection: {fileID: 3163112184282766354}
@@ -3607,6 +3656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerDead: 0
+  playerHealth: {fileID: 0}
   loseSection: {fileID: 7969772812324801481}
   healthBar: {fileID: 1676159886463562212}
   PowerUpSection: {fileID: 3163112184282766354}
@@ -4042,7 +4092,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 188041411283997419}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1915527667047518538}
+        m_TargetAssemblyTypeName: LoseMenu, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8426216538949900714
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,7 +4225,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1227039118801849175}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3379270761602602422}
+        m_TargetAssemblyTypeName: WinMenu, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8660913614937724344
 GameObject:
   m_ObjectHideFlags: 0

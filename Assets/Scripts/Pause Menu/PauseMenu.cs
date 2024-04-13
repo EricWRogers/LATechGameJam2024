@@ -66,15 +66,17 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Loading Main Menu");
         Time.timeScale = 1.0f;
-        //SceneManager.LoadScene(0);
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quit the Game");
-        #if(Unity_Editior)
-        EditorApplication.ExitPlayMode();
-        #endif
+        #if(UNITY_EDITOR)
+        Debug.Log("Quiting Play Mode");
+        EditorApplication.ExitPlaymode();
+        #else
+        Debug.Log("Quitting Build");
         Application.Quit();
+        #endif
     }
 }

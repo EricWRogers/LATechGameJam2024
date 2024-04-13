@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using SuperPupSystems.Helper;
 
 public class EnemyDefeated : MonoBehaviour
 {
@@ -21,7 +22,8 @@ public class EnemyDefeated : MonoBehaviour
         particle = GetComponentInChildren<ParticleSystem>();
         anim = GetComponentInChildren<Animator>();
         rigi = GetComponent<Rigidbody>();
-        agent.GetComponentInParent<NavMeshAgent>();
+        
+        //agent.GetComponentInParent<NavMeshAgent>();
     }
     public void Defeated()
     {
@@ -31,6 +33,10 @@ public class EnemyDefeated : MonoBehaviour
             spareParticle.enableEmission = false;
         }
         agent.enabled = false;
+        
+        
+        
+
         light.enabled = false;
         anim.enabled = false;
         particle.enableEmission = false;

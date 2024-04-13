@@ -13,8 +13,9 @@ public class RangedEnemyStateMachine : SimpleStateMachine
     public AttackState shoot;
 
     public bool LOS;
+    public float attackRange;
+    public float attackZone;
     public Transform target;
-
 
     private void Awake()
     {
@@ -24,11 +25,14 @@ public class RangedEnemyStateMachine : SimpleStateMachine
         foreach (SimpleState s in states)
             s.stateMachine = this;
 
-        ChangeState(nameof(MoveInRangeState));
+        
     }
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+
+        ChangeState(nameof(MoveInRangeState));
     }
     void Update()
     {

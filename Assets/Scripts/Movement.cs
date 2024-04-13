@@ -112,4 +112,9 @@ public class Movement : MonoBehaviour
 
 
     }
+
+    public void DestroyMovingAround()
+    {
+        Destroy(this);
+    }
 }
