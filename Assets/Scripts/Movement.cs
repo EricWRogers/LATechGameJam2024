@@ -19,6 +19,11 @@ public class Movement : MonoBehaviour
     private Vector2 input;
 
     private Rigidbody rb;
+    private Vector3 m_lastPosition;
+    private RaycastHit m_info;
+    public LayerMask mask;
+    public List<string> tags;
+    public GameObject groundCheck;
 
 
 
@@ -29,24 +34,22 @@ public class Movement : MonoBehaviour
         jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
-
-    void OnCollisionStay()
-    {
-        isGrounded = true;
-    }
-
     // Update is called once per frame
     void Update()
     {
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         input.Normalize();
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             moveSpeed = baseSpeed * sprintSpeedMultiplier;
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (!(Input.GetKey(KeyCode.LeftShift)))
         {
             moveSpeed = baseSpeed;
+        }
+        else
+        {
+            moveSpeed = baseSpeed;   
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -59,8 +62,31 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(CalculateMovement(moveSpeed), ForceMode.VelocityChange);
+        CollisionCheck();
+
+        rb.AddForce(CalculateMovement(moveSpeed), ForceMode.Impulse);
+
+        m_lastPosition = transform.position;
     }
+
+     private void CollisionCheck()
+        {
+            if (Physics.Linecast(transform.position, groundCheck.transform.position, out m_info, mask))
+            {
+                if (tags.Contains(m_info.transform.tag))
+                {
+                    isGrounded = true;
+                }
+                else
+                {
+                    isGrounded = false;
+                }
+            }
+            else
+            {
+                isGrounded = false;
+            }
+        }
 
     Vector3 CalculateMovement(float _speed)
     {
