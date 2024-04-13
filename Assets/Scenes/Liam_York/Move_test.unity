@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &133586423 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3671452774733950454, guid: 94de6793189891244b02ee98cd97ecf8,
+    type: 3}
+  m_PrefabInstance: {fileID: 701153265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &262545945
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,18 +371,12 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 315250561}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315250563}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e56c1d7c3544d9b458d67523130351dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &315250563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7501070036653936716, guid: f35632d41f56f744a9e3f322561f0bad,
-    type: 3}
-  m_PrefabInstance: {fileID: 315250561}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &465179432
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,9 +680,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3671452774733950454, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1736945937}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94de6793189891244b02ee98cd97ecf8, type: 3}
+--- !u!1 &1736945936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736945937}
+  - component: {fileID: 1736945938}
+  m_Layer: 0
+  m_Name: Test_Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1736945937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736945936}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -2.183, y: -0.061, z: 1.455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 133586423}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1736945938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736945936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec3019e8cfb31e49a9e2bae87fb9189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
+  Bullet_Enemy: {fileID: 8868396285415600353, guid: 093a706ad706a1c4cb39648b5cb2c345,
+    type: 3}
+  bulletTime: 3
+  spawnPoint: {fileID: 1736945937}
 --- !u!1001 &321376826551673089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -755,7 +808,23 @@ PrefabInstance:
         type: 3}
       propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 315250563}
+      objectReference: {fileID: 11500000, guid: 4501280c827d82e49a6dee23f304d879,
+        type: 3}
+    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018154112593348681, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: pausedGame
+      value: 
+      objectReference: {fileID: 315250562}
+    - target: {fileID: 3018154112593348681, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: soundPlayer
+      value: 
+      objectReference: {fileID: 579016433}
     - target: {fileID: 5986635869959824606, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
       propertyPath: m_Name
