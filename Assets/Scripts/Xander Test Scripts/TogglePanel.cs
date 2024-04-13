@@ -6,6 +6,7 @@ public class TogglePanel : MonoBehaviour
 {
     public GameObject panel;
     public GameObject upgrade;
+    public GameObject upgradeSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +23,11 @@ public class TogglePanel : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            upgrade.GetComponent<UpgradeHolder>().upgrade.PickUp();
+            upgradeSystem.GetComponent<UpgradeSystem>().AddUpgrade(upgrade.GetComponent<UpgradeHolder>().upgrade);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            upgrade.GetComponent<UpgradeHolder>().upgrade.Drop();
+            upgradeSystem.GetComponent<UpgradeSystem>().PopUpgrade(/*upgradeSystem.GetComponent<UpgradeSystem>().upgradeCount-1*/);
         }
     }
 }
