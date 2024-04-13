@@ -71,10 +71,12 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Quit the Game");
-        #if(Unity_Editior)
-        EditorApplication.ExitPlayMode();
-        #endif
+        #if(UNITY_EDITOR)
+        Debug.Log("Quiting Play Mode");
+        EditorApplication.ExitPlaymode();
+        #else
+        Debug.Log("Quitting Build");
         Application.Quit();
+        #endif
     }
 }
