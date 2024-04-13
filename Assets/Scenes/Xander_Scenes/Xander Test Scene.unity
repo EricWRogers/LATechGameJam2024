@@ -218,16 +218,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7669803644366310424, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
-      propertyPath: mask.m_Bits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7669803644366310424, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: upgradeSystem
-      value: 
-      objectReference: {fileID: 543994110}
-    - target: {fileID: 7669803644366310424, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
       propertyPath: tags.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -244,11 +234,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5986635869959824606, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      insertIndex: 6
-      addedObject: {fileID: 543994110}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 849061c6fb7c0a14b8c5a0c93589d3d8, type: 3}
 --- !u!1 &379121088
 GameObject:
@@ -454,11 +440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604dfbbf654f92618bc36972daaa4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &543994110
+--- !u!114 &543994110 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2488344022149906058, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 209449380}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543994101}
   m_Enabled: 1
@@ -466,9 +452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8114447ccbdcf9a4f9b4de2d2d33e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrades: []
-  activate: 0
-  upgradeCount: 0
 --- !u!1 &652087509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1240,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: USB
       objectReference: {fileID: 0}
+    - target: {fileID: 6548458126504879074, guid: ea203c0d6a564c04e941b84bdd434b38,
+        type: 3}
+      propertyPath: upgrade
+      value: 
+      objectReference: {fileID: 11400000, guid: bda60649b17ecde4a8eaaf64651e09b9,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -13,8 +13,7 @@ public class RangedEnemyStateMachine : SimpleStateMachine
     public AttackState shoot;
 
     public bool LOS;
-    public float attackRange;
-    public float attackZone;
+    //public float attackZone;
     public Transform target;
 
     private void Awake()
