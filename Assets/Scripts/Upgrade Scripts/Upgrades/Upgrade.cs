@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewUpgrade", menuName = "Upgrades")]
-public class BaseUpgrade : ScriptableObject
+public class Upgrade : ScriptableObject
 {
         public float count;
         public bool active = false;
