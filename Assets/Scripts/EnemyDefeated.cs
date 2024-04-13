@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyDefeated : MonoBehaviour
 {
@@ -9,7 +8,9 @@ public class EnemyDefeated : MonoBehaviour
     private Animator anim;
     private ParticleSystem particle;
     private Light light;
+    public NavMeshAgent agent;
 
+    public ParticleSystem particleExplode;
     public ParticleSystem spareParticle;
 
     bool shrink;
@@ -18,15 +19,18 @@ public class EnemyDefeated : MonoBehaviour
     {
         light = GetComponentInChildren<Light>();
         particle = GetComponentInChildren<ParticleSystem>();
-        anim = GetComponentInChildren<Animator>();  
+        anim = GetComponentInChildren<Animator>();
         rigi = GetComponent<Rigidbody>();
+        agent.GetComponentInParent<NavMeshAgent>();
     }
     public void Defeated()
     {
-        if(spareParticle != null)
+        particleExplode.Play();
+        if (spareParticle != null)
         {
             spareParticle.enableEmission = false;
         }
+        agent.enabled = false;
         light.enabled = false;
         anim.enabled = false;
         particle.enableEmission = false;
@@ -39,7 +43,7 @@ public class EnemyDefeated : MonoBehaviour
     private void Dissolve()
     {
         Debug.Log("Scaling down");
-        
+
         shrink = true;
     }
 
