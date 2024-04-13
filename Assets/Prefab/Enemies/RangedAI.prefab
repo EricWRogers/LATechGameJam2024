@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7455782996230608401}
   - component: {fileID: 6893521931654343126}
   - component: {fileID: 2947837134791151771}
-  - component: {fileID: 976020245656348252}
   - component: {fileID: 712259614861245739}
+  - component: {fileID: 976020245656348252}
   m_Layer: 0
   m_Name: RangedAI
   m_TagString: CANBREAK
@@ -155,6 +155,25 @@ MonoBehaviour:
     m_Bits: 64
   visibleTargets: []
   targetsInSight: 0
+--- !u!114 &712259614861245739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922751998574900180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad54517dc19258185960ef6d2f3a1b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeout:
+    m_PersistentCalls:
+      m_Calls: []
+  autoStart: 0
+  autoRestart: 1
+  countDownTime: 2
+  timeScale: 1
 --- !u!195 &976020245656348252
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -177,25 +196,6 @@ NavMeshAgent:
   m_BaseOffset: 2.32
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &712259614861245739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5922751998574900180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad54517dc19258185960ef6d2f3a1b93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeout:
-    m_PersistentCalls:
-      m_Calls: []
-  autoStart: 0
-  autoRestart: 1
-  countDownTime: 2
-  timeScale: 1
 --- !u!1001 &8212537967757990350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -346,6 +346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
         type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
       propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
@@ -386,6 +391,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
         type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 4585481772348564758}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 8831357793935509793}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
       propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.Animator, UnityEngine
       objectReference: {fileID: 0}
@@ -406,12 +451,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
         type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
       propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
         type: 3}
       propertyPath: hurt.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256909552874914334, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []

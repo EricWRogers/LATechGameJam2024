@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using SuperPupSystems.Helper;
 
 public class EnemyDefeated : MonoBehaviour
 {
@@ -12,8 +13,6 @@ public class EnemyDefeated : MonoBehaviour
 
     public ParticleSystem particleExplode;
     public ParticleSystem spareParticle;
-
-    public MonoBehaviour brain;
 
     bool shrink;
 
@@ -34,7 +33,10 @@ public class EnemyDefeated : MonoBehaviour
             spareParticle.enableEmission = false;
         }
         agent.enabled = false;
-        brain.enabled = false;
+        
+        
+        
+
         light.enabled = false;
         anim.enabled = false;
         particle.enableEmission = false;
