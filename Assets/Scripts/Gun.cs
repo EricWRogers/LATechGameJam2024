@@ -4,38 +4,67 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public GameObject _bullet;
-    public AudioSource soundPlayer;
-    public PauseMenu pausedGame;
-    // Start is called before the first frame update
-    void Start()
-    {
-        UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
+    public Transform firePoint;
+    public GameObject bulletPrefab;
+    public float bulletSpeed = 10f;
 
-        if (pausedGame == null)
-        {
-            pausedGame = new PauseMenu();
-        }
-    }
+    public float fireRate = 0.2f;
+    public float weaponRange = 50f;
+    public int damagePerShot = 20;
+
+    public int ammo = 10;
+
+    private float nextFireTime;
+
+    public int fireMode = 0;
+
 
     // Update is called once per frame
     void Update()
     {
-        if(pausedGame != null && pausedGame.isGamePaused == false)
+        if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 0)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                FireGun();
-            }
+            ShootPrefab();
+            //ShootRaycast();
+
+            ammo--;
+
+        }
+
+        if(Input.GetButton("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 1)
+        {
+            ShootPrefab();
+            ammo--;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ammo = 10;
         }
     }
 
-    void FireGun()
+    void ShootPrefab()
     {
-        if (!pausedGame.isGamePaused)
+        nextFireTime = Time.time + fireRate;
+
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+        //Rigidbody rigi = bullet.GetComponentInChildren<Rigidbody>();
+        //rigi.AddForce(firePoint.forward * bulletSpeed, ForceMode.Impulse);
+        Destroy(bullet, 3f);
+    }
+
+    void ShootRaycast()
+    {
+        nextFireTime = Time.time + fireRate;
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, weaponRange))
         {
-            Instantiate(_bullet, transform.position, transform.rotation);
-            soundPlayer.Play();
+            if (hit.transform.CompareTag("Enemy"))
+            {
+                Debug.Log("Hit!");
+            }
         }
     }
 }
