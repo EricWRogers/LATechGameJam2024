@@ -9,7 +9,10 @@ public class FPScamera : MonoBehaviour
     public Transform player;
     public Camera playerCamera;
 
+    public PauseMenu pausedGame;
+
     private float rotationX = 0f;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +24,12 @@ public class FPScamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MouseMovement();
+        if(pausedGame.isGamePaused == false)
+        {
+            MouseMovement();
+        }else{
+            StopMouseMovement(true);
+        }
     }
 
     private void MouseMovement()
@@ -30,11 +38,28 @@ public class FPScamera : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
 
         player.Rotate(Vector3.up * mouseX);
+       
+
 
         rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+        rotationX = Mathf.Clamp(rotationX, -90f, 30f);
+        
+
 
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
+    }
+    private void StopMouseMovement(bool stop)
+    {
+        if (stop)
+        {
+            Cursor.lockState = CursorLockMode.Locked; 
+            Cursor.visible = false; 
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None; 
+            Cursor.visible = true; 
+        }
     }
 }
 

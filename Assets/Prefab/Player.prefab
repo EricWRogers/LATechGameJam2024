@@ -257,6 +257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 8868396285415600353, guid: a4fcd38b3f007c842bf8260ca804b761, type: 3}
+  soundPlayer: {fileID: 0}
+  pausedGame: {fileID: 0}
 --- !u!1 &5986635869959824606
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +274,7 @@ GameObject:
   - component: {fileID: 9010230052708564299}
   - component: {fileID: 7669803644366310424}
   - component: {fileID: 2085544570794341644}
+  - component: {fileID: 2892953045110323924}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -383,6 +386,7 @@ MonoBehaviour:
   sensitivity: 2
   player: {fileID: 2379982010731505965}
   playerCamera: {fileID: 8352364989529367057}
+  pausedGame: {fileID: 0}
 --- !u!114 &7669803644366310424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,3 +433,53 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2892953045110323924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5986635869959824606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604dfbbf654f92618bc36972daaa4968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: HealthBar, Assembly-CSharp
+        m_MethodName: SetHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  healed:
+    m_PersistentCalls:
+      m_Calls: []
+  hurt:
+    m_PersistentCalls:
+      m_Calls: []
+  outOfHealth:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2892953045110323924}
+        m_TargetAssemblyTypeName: SuperPupSystems.Helper.Health, Assembly-CSharp
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxHealth: 100
+  currentHealth: 1
