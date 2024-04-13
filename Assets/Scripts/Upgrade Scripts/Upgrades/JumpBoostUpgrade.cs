@@ -6,7 +6,6 @@ using UnityEngine;
 public class JumpBoostUpgrade : Upgrade
 {
     public float boostValue = 0;
-    public float tempSpeed = 0;
     public float jumpSpeed = 0;
 
     public GameObject player;
@@ -24,7 +23,7 @@ public class JumpBoostUpgrade : Upgrade
         {
             player = GameObject.FindWithTag("Player");
             
-            player.GetComponent<Movement>().jumpForce *= boostValue;
+            player.GetComponent<Movement>().jumpForce += boostValue;
         }
     }
 
@@ -54,7 +53,6 @@ public class JumpBoostUpgrade : Upgrade
     {
         if(player.GetComponent<Movement>()!=null)
         {
-            tempSpeed = player.GetComponent<Movement>().moveSpeed;
             
             if(player.GetComponent<Movement>().isGrounded == false)
             {   

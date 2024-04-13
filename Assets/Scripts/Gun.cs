@@ -11,7 +11,7 @@ public class Gun : MonoBehaviour
     void Start()
     {
         UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
-        
+
         if (pausedGame == null)
         {
             pausedGame = new PauseMenu();
@@ -34,7 +34,7 @@ public class Gun : MonoBehaviour
     {
         if (!pausedGame.isGamePaused)
         {
-            Instantiate(_bullet, transform.parent.position, transform.parent.rotation);
+            Instantiate(_bullet, transform.position, transform.rotation);
             soundPlayer.Play();
         }
     }
