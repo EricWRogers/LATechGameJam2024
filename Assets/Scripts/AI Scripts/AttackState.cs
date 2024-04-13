@@ -21,11 +21,12 @@ public class AttackState : SimpleState
 
     public override void OnStart()
     {
+        Debug.Log("Attack State");
         base.OnStart();
         if (attack == null)
             attack = new UnityEvent();
         ((RangedEnemyStateMachine)stateMachine).transform.LookAt(((RangedEnemyStateMachine)stateMachine).target);
-        agent.SetDestination(((RangedEnemyStateMachine)stateMachine).transform.position);
+        agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
 
     }
 
@@ -34,6 +35,7 @@ public class AttackState : SimpleState
         playerInRange = Physics.CheckSphere(((RangedEnemyStateMachine)stateMachine).transform.position, attackRange, LayerMask.GetMask("Player"));
         if(playerInRange && !isAttacking)
         {
+            agent.SetDestination(((RangedEnemyStateMachine)stateMachine).transform.position);
             isAttacking = true;
             attack.Invoke();
         }
