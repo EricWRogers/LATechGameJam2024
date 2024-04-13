@@ -6,6 +6,10 @@ using UnityEngine;
 public class JumpBoostUpgrade : Upgrade
 {
     public float boostValue = 0;
+    public float tempSpeed = 0;
+    public float jumpSpeed = 0;
+
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +22,16 @@ public class JumpBoostUpgrade : Upgrade
         Debug.Log("SuperJump");
         if(GameObject.FindWithTag("Player").GetComponent<Movement>()!=null)
         {
+            player = GameObject.FindWithTag("Player");
             
-            GameObject.FindWithTag("Player").GetComponent<Movement>().jumpForce *= boostValue;
+            player.GetComponent<Movement>().jumpForce *= boostValue;
         }
     }
 
     public override void Drop()
     {
         Debug.Log("SuperJump");
-        if(GameObject.FindWithTag("Player").GetComponent<Movement>()!=null)
+        if(player.GetComponent<Movement>()!=null)
         {
             
             GameObject.FindWithTag("Player").GetComponent<Movement>().jumpForce /= boostValue;
@@ -37,11 +42,26 @@ public class JumpBoostUpgrade : Upgrade
     {
         if(Input.GetKeyDown(KeyCode.J))
         {
-            if(GameObject.FindWithTag("Player").GetComponent<Movement>()!=null)
+            if(player.GetComponent<Movement>()!=null)
             {
                 
-                GameObject.FindWithTag("Player").GetComponent<Movement>().jumpForce *= boostValue;
+                player.GetComponent<Movement>().jumpForce *= boostValue;
             }
+        }
+    }
+
+    public override void Active()
+    {
+        if(player.GetComponent<Movement>()!=null)
+        {
+            tempSpeed = player.GetComponent<Movement>().moveSpeed;
+            
+            if(player.GetComponent<Movement>().isGrounded == false)
+            {   
+                player.GetComponent<Movement>().moveSpeed *= jumpSpeed;
+            }
+            
+            //player.GetComponent<Movement>().moveSpeed = tempSpeed;
         }
     }
 }
