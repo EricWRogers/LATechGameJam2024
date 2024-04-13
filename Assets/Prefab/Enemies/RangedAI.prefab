@@ -303,6 +303,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: WHEATLYANTIANIMATIONPARENT
       objectReference: {fileID: 0}
+    - target: {fileID: 5363929593347590010, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 976020245656348252}
+    - target: {fileID: 5363929593347590010, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: particleExplode
+      value: 
+      objectReference: {fileID: 2252289552975267356}
     - target: {fileID: 5645874172530982104, guid: 94de6793189891244b02ee98cd97ecf8,
         type: 3}
       propertyPath: m_IsActive
@@ -323,6 +333,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94de6793189891244b02ee98cd97ecf8, type: 3}
+--- !u!198 &2252289552975267356 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7978538709944737746, guid: 94de6793189891244b02ee98cd97ecf8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8212537967757990350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4585481772348564758 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5645874172530982104, guid: 94de6793189891244b02ee98cd97ecf8,

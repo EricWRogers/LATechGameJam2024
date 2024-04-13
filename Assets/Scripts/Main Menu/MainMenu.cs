@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("Next Scene");
-        //SceneManager.LoadSceneAysnc();
+        SceneManager.LoadScene("EricTest");
     }
 
     public void QuitGame()
