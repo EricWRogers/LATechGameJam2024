@@ -41,7 +41,7 @@ public class FPScamera : MonoBehaviour
 
 
         rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, -90f, 30f);
+        rotationX = Mathf.Clamp(rotationX, -90f, 60f);
         
 
 
