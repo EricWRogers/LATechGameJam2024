@@ -6,7 +6,7 @@ TagManager:
   tags:
   - CANBREAK
   - Ground
-  - Critical
+  - HUD
   layers:
   - Default
   - TransparentFX
@@ -39,7 +39,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Cloud
   m_SortingLayers:
   - name: Default
     uniqueID: 0

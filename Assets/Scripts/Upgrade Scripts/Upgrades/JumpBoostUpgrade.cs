@@ -23,7 +23,7 @@ public class JumpBoostUpgrade : Upgrade
         {
             player = GameObject.FindWithTag("Player");
             
-            player.GetComponent<Movement>().jumpForce *= boostValue;
+            player.GetComponent<Movement>().jumpForce += boostValue;
         }
     }
 
