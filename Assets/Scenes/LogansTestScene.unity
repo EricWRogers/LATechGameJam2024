@@ -324,7 +324,7 @@ PrefabInstance:
     - target: {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
         type: 3}
@@ -517,10 +517,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370476476dd363f44bf84071a37e1acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
   jumpForce: 5
   movementSpeed: 5
   mouseSensitivity: 2
   upDownRange: 60
+  upgradeSystem: {fileID: 0}
 --- !u!1 &1177196440
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1177196441
 AudioListener:
   m_ObjectHideFlags: 0
@@ -674,7 +676,7 @@ PrefabInstance:
     - target: {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5409465865959310199, guid: 2a726029eac6497469d5c33649c1f6f0,
         type: 3}
@@ -747,7 +749,7 @@ PrefabInstance:
     - target: {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7455782996230608401, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
         type: 3}
@@ -931,7 +933,7 @@ PrefabInstance:
     - target: {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2076757129312581581, guid: 2a726029eac6497469d5c33649c1f6f0,
         type: 3}
@@ -1084,7 +1086,7 @@ PrefabInstance:
     - target: {fileID: 2526900228083807091, guid: 913edaa002aa9fa4dac239f00054eb69,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6649895739340698011, guid: 913edaa002aa9fa4dac239f00054eb69,
         type: 3}
@@ -1207,7 +1209,7 @@ PrefabInstance:
     - target: {fileID: 5041974644861247081, guid: 94de6793189891244b02ee98cd97ecf8,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
