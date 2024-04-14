@@ -21,7 +21,7 @@ public class FPScamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if(pausedGame.isGamePaused == false)
         {
