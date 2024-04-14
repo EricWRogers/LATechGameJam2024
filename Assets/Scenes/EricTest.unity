@@ -863,6 +863,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1174226349575920356, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: m_TagString
+      value: HUD
+      objectReference: {fileID: 0}
     - target: {fileID: 2379982010731505965, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22229,7 +22234,7 @@ MonoBehaviour:
   - {fileID: 1042369048}
   - {fileID: 65846401}
   timeBetweenSpawns: 10
-  nextSpawnTime: 0
+  nextSpawnTime: 10
   spawnPointIndex: 0
   upgrades:
   - {fileID: 11400000, guid: 0262dee80d1ad6e4fb7fa70e6f1b1fea, type: 2}

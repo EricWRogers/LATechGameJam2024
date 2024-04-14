@@ -48,7 +48,7 @@ public class WinMenu : MonoBehaviour
         healthBar.SetActive(false);
         PowerUpSection.SetActive(false);
         TMSection.SetActive(false);
-        Time.timeScale = 1.0f;
+        Time.timeScale = 0.0f;
     }
 
     public void Retry()
