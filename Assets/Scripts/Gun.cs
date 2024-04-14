@@ -29,8 +29,11 @@ public class Gun : MonoBehaviour
 
     GameObject gunHolder;
 
+    AudioSource audio;
+
     private void Start()
     {
+        audio = GetComponent<AudioSource>();
         gunHolder = GetComponentInParent<WeaponSway>().gameObject;
         anim = GetComponent<Animator>();
         UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
@@ -75,6 +78,7 @@ public class Gun : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         MuzzleFlash();
+        audio.Play();
         anim.Play("Recoil");
         //Rigidbody rigi = bullet.GetComponentInChildren<Rigidbody>();
         //rigi.AddForce(firePoint.forward * bulletSpeed, ForceMode.Impulse);
