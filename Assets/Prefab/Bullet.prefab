@@ -224,7 +224,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  critDamage: 3
   speed: 40
   lifeTime: 10
   destroyOnImpact: 0
@@ -245,7 +244,7 @@ MonoBehaviour:
         m_CallState: 2
   mask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 9
   tags:
   - CANBREAK
   - Critical

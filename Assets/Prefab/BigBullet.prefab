@@ -244,7 +244,7 @@ MonoBehaviour:
         m_CallState: 2
   mask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 9
   tags:
   - CANBREAK
   - Critical
