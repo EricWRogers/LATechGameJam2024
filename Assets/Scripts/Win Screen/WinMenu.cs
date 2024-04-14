@@ -16,7 +16,6 @@ public class WinMenu : MonoBehaviour
     public GameObject healthBar;
     public GameObject PowerUpSection;
     public GameObject TMSection;
-    public GameObject GunSection;
 
     void Start()
     {
@@ -47,10 +46,9 @@ public class WinMenu : MonoBehaviour
         Cursor.visible = true;
         winSection.SetActive(true);
         healthBar.SetActive(false);
-        GunSection.SetActive(false);
         PowerUpSection.SetActive(false);
         TMSection.SetActive(false);
-        Time.timeScale = 1.0f;
+        Time.timeScale = 0.0f;
     }
 
     public void Retry()
