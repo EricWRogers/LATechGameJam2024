@@ -25328,7 +25328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_LocalScale.x
@@ -25474,7 +25474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_LocalScale.x
@@ -25620,7 +25620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 302577c4c425ce14781bc5dd214f5576, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 302577c4c425ce14781bc5dd214f5576, type: 3}
       propertyPath: m_LocalScale.x
@@ -25766,7 +25766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_LocalScale.x
@@ -25912,7 +25912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_LocalScale.x
@@ -26058,7 +26058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 302577c4c425ce14781bc5dd214f5576, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 302577c4c425ce14781bc5dd214f5576, type: 3}
       propertyPath: m_LocalScale.x
