@@ -230,6 +230,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &99366854
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516460314083213273, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905175396446701542, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905175396446701542, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8296964596199338050, guid: 1e740a8c387ded34aba70350802568f1, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8905175396446701542, guid: 1e740a8c387ded34aba70350802568f1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 781103602}
+  m_SourcePrefab: {fileID: 100100000, guid: 1e740a8c387ded34aba70350802568f1, type: 3}
 --- !u!1001 &275259192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,6 +320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WheatlyHenchAI (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
         type: 3}
@@ -416,6 +499,28 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &781103597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8905175396446701542, guid: 1e740a8c387ded34aba70350802568f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 99366854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &781103602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781103597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370476476dd363f44bf84071a37e1acc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  movementSpeed: 5
+  mouseSensitivity: 2
+  upDownRange: 60
 --- !u!1 &1177196440
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,7 +539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1177196441
 AudioListener:
   m_ObjectHideFlags: 0
@@ -566,6 +671,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheatlyCharge (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5409465865959310199, guid: 2a726029eac6497469d5c33649c1f6f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,6 +743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WheatlyRanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7455782996230608401, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
         type: 3}
@@ -813,6 +928,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheatlyCharge
       objectReference: {fileID: 0}
+    - target: {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2076757129312581581, guid: 2a726029eac6497469d5c33649c1f6f0,
         type: 3}
       propertyPath: attack.attack.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -961,6 +1081,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheatlyCharge
       objectReference: {fileID: 0}
+    - target: {fileID: 2526900228083807091, guid: 913edaa002aa9fa4dac239f00054eb69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6649895739340698011, guid: 913edaa002aa9fa4dac239f00054eb69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1079,6 +1204,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheatlyShoot
       objectReference: {fileID: 0}
+    - target: {fileID: 5041974644861247081, guid: 94de6793189891244b02ee98cd97ecf8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1104,3 +1234,4 @@ SceneRoots:
   - {fileID: 1492380441}
   - {fileID: 275259192}
   - {fileID: 1673720641}
+  - {fileID: 99366854}
