@@ -18,8 +18,13 @@ public class WeaponSwap : Upgrade
     public int fireMode = 0;
 
     public bool destroyOnImpact = true;
+    public bool recoil = false;
+    public int recoilDamage = 0;
+    public bool lifeSteal = false;
+    public float lifeStealRatio = 0.5f;
 
     public Gun gun;
+    private Gun m_gun;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +44,10 @@ public class WeaponSwap : Upgrade
             gun.bulletPrefab.GetComponent<SuperPupSystems.Helper.Bullet>().damage = damagePerShot;
             gun.bulletPrefab.GetComponent<SuperPupSystems.Helper.Bullet>().lifeTime = weaponRange;
             gun.bulletPrefab.GetComponent<SuperPupSystems.Helper.Bullet>().destroyOnImpact = destroyOnImpact;
+            gun.bulletPrefab.GetComponent<LifeSteal>().recoil = recoil;
+            gun.bulletPrefab.GetComponent<LifeSteal>().recoilDamage = recoilDamage;
+            gun.bulletPrefab.GetComponent<LifeSteal>().drain = lifeSteal;
+            gun.bulletPrefab.GetComponent<LifeSteal>().lifeStealRatio = lifeStealRatio;
             gun.fireRate = fireRate;
             gun.ammo = ammo;
             gun.fireMode = fireMode;
@@ -49,7 +58,6 @@ public class WeaponSwap : Upgrade
     {
         if(GameObject.FindWithTag("Player").GetComponentInChildren<Gun>()!=null)
         {
-            
             gun.bulletPrefab = oldBullet;
         }
     }
