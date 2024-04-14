@@ -54,6 +54,7 @@ public class DashUpgrade : Upgrade
     {
         nextDashTime = Time.time + dashCoolDown;
         player.GetComponent<Movement>().antiSlip = false;
+        dashEnd = Time.time + dashDuration;
 
         if(recoil)
         {

@@ -20,10 +20,10 @@ MonoBehaviour:
   newColor: {r: 0, g: 0, b: 0, a: 0}
   dropChance: 0
   dashCoolDown: 2
-  recoil: 0
-  recoilDamage: 0
-  dashForce: 10
-  nextDashTime: 47.691093
-  dashDuration: 2
-  dashEnd: 0
+  recoil: 1
+  recoilDamage: 5
+  dashForce: 100
+  nextDashTime: 32.248795
+  dashDuration: 0.5
+  dashEnd: 30.748796
   player: {fileID: 0}

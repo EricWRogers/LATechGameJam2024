@@ -114,7 +114,7 @@ public class Movement : MonoBehaviour
         verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
         Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
 
-        if (mag > 0.5f)
+        if (mag > 0.5f&& antiSlip)
         {
             Vector3 velocityChange = targetVelocity - velocity;
 
@@ -125,15 +125,11 @@ public class Movement : MonoBehaviour
 
             return (velocityChange);
         }
-        else if(antiSlip)
+        else
         {
             return new Vector3();
         }
-        else
-        {
-            return velocity;
-        }
-
+        
 
     }
 
