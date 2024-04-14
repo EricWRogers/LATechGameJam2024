@@ -8,6 +8,7 @@ public class FirstPersonMovement : MonoBehaviour
     public float movementSpeed = 5.0f;
     public float mouseSensitivity = 2.0f;
     public float upDownRange = 60.0f;
+    public UpgradeSystem upgradeSystem;
 
     float verticalRotation = 0;
 
@@ -75,6 +76,7 @@ public class FirstPersonMovement : MonoBehaviour
         {
             rigi.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+        upgradeSystem.ActivateEffects();
 
     }
 }
