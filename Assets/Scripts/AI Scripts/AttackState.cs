@@ -16,6 +16,8 @@ public class AttackState : SimpleState
     public NavMeshAgent agent;
     private bool playerInRange;
     public bool isAttacking;
+    
+    
 
 
 
@@ -44,7 +46,6 @@ public class AttackState : SimpleState
                 Debug.Log("Attaking");
                 isAttacking = true;
                 attack.Invoke();
-            
             }
             if (((RangedEnemyStateMachine)stateMachine).LOS == false)
             {
@@ -67,6 +68,8 @@ public class AttackState : SimpleState
                 isAttacking = true;
                 attack.Invoke();
 
+                isAttacking = false;
+                
             }
             if (((BasicEnemyStateMachine)stateMachine).LOS == false)
             {
