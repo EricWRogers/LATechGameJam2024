@@ -4,7 +4,6 @@ using UnityEngine;
 using SuperPupSystems.Helper;
 using SuperPupSystems.StateMachine;
 using UnityEngine.AI;
-using static UnityEditor.VersionControl.Asset;
 
 public class BasicEnemyStateMachine : SimpleStateMachine
 {
