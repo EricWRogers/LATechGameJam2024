@@ -748,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5eebf132a926cd44b974f738880d934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 2
+  sensitivity: 200
   player: {fileID: 2379982010731505965}
   playerCamera: {fileID: 8352364989529367057}
   pausedGame: {fileID: 811810960492852908}
@@ -769,7 +769,7 @@ MonoBehaviour:
   maxVec: 10
   sprintSpeedMultiplier: 2
   jump: {x: 0, y: 0, z: 0}
-  jumpForce: 5
+  jumpForce: 8
   isGrounded: 0
   mask:
     serializedVersion: 2
@@ -1153,6 +1153,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2379982010731505965}
     m_Modifications:
+    - target: {fileID: 58110002871519118, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000009035
+      objectReference: {fileID: 0}
+    - target: {fileID: 58110002871519118, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035
+      objectReference: {fileID: 0}
+    - target: {fileID: 367138330933138849, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: startTime
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 520096624712525707, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: timeout.m_PersistentCalls.m_Calls.Array.size
@@ -1278,11 +1293,46 @@ PrefabInstance:
       propertyPath: timeout.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 954858356369835203, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 954858356369835203, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 492.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 954858356369835203, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 326.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1915527667047518538, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 2892953045110323924}
+    - target: {fileID: 2193547309969954601, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693663685628799918, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693663685628799918, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693663685628799918, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 3153338340068705772, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: m_AnchorMax.x
