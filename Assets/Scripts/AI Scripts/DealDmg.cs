@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DealDmg : MonoBehaviour
 {
-    public float hitRadius;
+    public float hitRadius = 3;
     public LayerMask targetMask;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,10 @@ public class DealDmg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Physics.OverlapSphere(transform.position, hitRadius, targetMask);
+        Collider[] targetsInHitRadius = Physics.OverlapSphere(transform.position, hitRadius, targetMask);
+        for (int i = 0; i < targetsInHitRadius.Length; i++)
+        {
+            Transform target = targetsInHitRadius[i].transform;
+        }
     }
 }

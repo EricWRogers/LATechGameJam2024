@@ -8,6 +8,7 @@ public class Upgrade : ScriptableObject
         public float count;
         public bool active = false;
         public string upgradeName;
+        public string upgradeDescription;
         public Sprite upgradeSprite;
         public Color newColor;
         public int dropChance;
