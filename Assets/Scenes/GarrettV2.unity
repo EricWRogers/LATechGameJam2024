@@ -1304,6 +1304,11 @@ PrefabInstance:
       propertyPath: thisHealth
       value: 
       objectReference: {fileID: 290962090}
+    - target: {fileID: 2841389146945939667, guid: 2a726029eac6497469d5c33649c1f6f0,
+        type: 3}
+      propertyPath: thishealth
+      value: 
+      objectReference: {fileID: 290962090}
     - target: {fileID: 4933369538186446238, guid: 2a726029eac6497469d5c33649c1f6f0,
         type: 3}
       propertyPath: m_Layer
