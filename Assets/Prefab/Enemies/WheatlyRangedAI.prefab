@@ -15117,7 +15117,7 @@ GameObject:
   - component: {fileID: 712259614861245739}
   - component: {fileID: 976020245656348252}
   m_Layer: 0
-  m_Name: WheatlyRanged
+  m_Name: WheatlyRangedAI
   m_TagString: CANBREAK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
