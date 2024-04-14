@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 2672819499430459357}
   - component: {fileID: 6878632763747908950}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: BigBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6.511, y: 5.8844, z: 2.1582}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5252710023303966713}

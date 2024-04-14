@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Dash
   m_EditorClassIdentifier: 
   count: 0
-  active: 0
-  upgradeName: Dash
-  upgradeDescription: 
-  upgradeSprite: {fileID: 0}
+  active: 1
+  upgradeName: Unstable Booster Rocket
+  upgradeDescription: Press E to dash forward in the direction you're looking. This
+    does consume some health
+  upgradeSprite: {fileID: 247516908, guid: bf3e7a8099749784c86981fa30215aa5, type: 3}
   newColor: {r: 0, g: 0, b: 0, a: 0}
   dropChance: 0
-  dashCoolDown: 0
-  recoil: 0
-  recoilDamage: 0
-  dashForce: 0
+  dashCoolDown: 2
+  backfire: 1
+  backfireDamage: 5
+  dashForce: 70
   nextDashTime: 0
-  dashDuration: 2
+  dashDuration: 0.5
   dashEnd: 0
   player: {fileID: 0}

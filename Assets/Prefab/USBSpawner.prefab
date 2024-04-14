@@ -57,9 +57,10 @@ MonoBehaviour:
   nextSpawnTime: 0
   spawnPointIndex: 0
   upgrades:
-  - {fileID: 11400000, guid: 0262dee80d1ad6e4fb7fa70e6f1b1fea, type: 2}
-  - {fileID: 11400000, guid: bda60649b17ecde4a8eaaf64651e09b9, type: 2}
-  - {fileID: 11400000, guid: 2fc10055d81f6214fa23c4ebd514f9ac, type: 2}
+  - {fileID: 11400000, guid: 04375f3ea65981241b775c5ff17d15e5, type: 2}
+  - {fileID: 11400000, guid: c81f91381545b244990c6d2c34bc1d85, type: 2}
+  - {fileID: 11400000, guid: 699167fef46b9cb48acbf5cfbaa421be, type: 2}
+  - {fileID: 11400000, guid: 39d7ddbadabb8af4fad9c7a67eb834d9, type: 2}
 --- !u!1 &1553764576589461386
 GameObject:
   m_ObjectHideFlags: 0
