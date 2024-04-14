@@ -21,13 +21,13 @@ public class TogglePanel : MonoBehaviour
             panel.SetActive(!panel.active);
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+       /* if (Input.GetKeyDown(KeyCode.P))
         {
-            upgradeSystem.GetComponent<UpgradeSystem>().AddUpgrade(upgrade.GetComponent<UpgradeHolder>().upgrade);
+            upgradeSystem.GetComponent<UpgradeSystem>().AddUpgrade(upgrade.GetComponent<UpgradeHolder>().upgrade1);
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            upgradeSystem.GetComponent<UpgradeSystem>().PopUpgrade(/*upgradeSystem.GetComponent<UpgradeSystem>().upgradeCount-1*/);
-        }
+            upgradeSystem.GetComponent<UpgradeSystem>().PopUpgrade(/*upgradeSystem.GetComponent<UpgradeSystem>().upgradeCount-1);
+        }*/
     }
 }
