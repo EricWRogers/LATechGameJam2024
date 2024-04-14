@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public PauseMenu menu;
     public float moveSpeed = 5.0f;
 
     public float baseSpeed = 5.0f;
@@ -25,6 +26,9 @@ public class Movement : MonoBehaviour
     public GameObject groundCheck;
     public UpgradeSystem upgradeSystem;
     public float mag;
+    public float mouseSensitivity = 2.0f;
+    public float upDownRange = 60.0f;
+    float verticalRotation = 0;
 
 
 
@@ -33,6 +37,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -59,6 +64,7 @@ public class Movement : MonoBehaviour
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+       
 
         mag = Vector3.Magnitude(transform.position);
         upgradeSystem.ActivateEffects();
@@ -93,6 +99,19 @@ public class Movement : MonoBehaviour
         targetVelocity *= _speed;
 
         Vector3 velocity = rb.velocity;
+
+        // Get mouse input for cam rotation
+        float rotX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        float rotY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+
+        // Rotate Player horizontally
+        transform.Rotate(0, rotX, 0);
+
+        // Rotate cam vertically
+
+        verticalRotation -= rotY;
+        verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
+        Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
 
         if (mag > 0.5f)
         {

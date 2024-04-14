@@ -58,7 +58,7 @@ public class PauseMenu : MonoBehaviour
         GunSection.SetActive(false);
         PowerUpSection.SetActive(false);
         TMSection.SetActive(false);
-        //Time.timeScale = 0.0f;
+        Time.timeScale = 0.0f;
         isGamePaused = true;
     }
 
