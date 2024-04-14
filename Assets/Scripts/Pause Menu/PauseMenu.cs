@@ -19,6 +19,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject powerUpSection;
     public GameObject tMSection;
     public GameObject popUpSection;
+    public GameObject reticle;
 
     void Start()
     {
@@ -49,6 +50,7 @@ public class PauseMenu : MonoBehaviour
         healthBar.SetActive(true);
         powerUpSection.SetActive(true);
         tMSection.SetActive(true);
+        reticle.SetActive(true);
         if(popUpChecker != null && popUpChecker.isOpen == true)
         {
             popUpChecker.OpenPopUp();
@@ -66,6 +68,7 @@ public class PauseMenu : MonoBehaviour
         powerUpSection.SetActive(false);
         tMSection.SetActive(false);
         popUpSection.SetActive(false);
+        reticle.SetActive(false);
         Time.timeScale = 0.0f;
         isGamePaused = true;
     }
