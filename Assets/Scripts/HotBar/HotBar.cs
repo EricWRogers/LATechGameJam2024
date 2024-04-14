@@ -18,7 +18,7 @@ public class HotBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerUpgradeSystem.upgrades.Count > 0 && imageIcons.Count < 5)
+        if(playerUpgradeSystem.upgrades.Count > 0)
         {
             UpdateHotBar();
         }
@@ -28,14 +28,10 @@ public class HotBar : MonoBehaviour
     {
         for (int i = 0; i < imageIcons.Count; i++)
         {
-            if (i < playerUpgradeSystem.upgrades.Count-1)
+            if (i < playerUpgradeSystem.upgrades.Count)
             {
                 Debug.Log("Switch Icon Image with Upgrade Sprite");
                 imageIcons[i].sprite = playerUpgradeSystem.upgrades[i].upgradeSprite;
-            }
-            else
-            {
-                imageIcons[i].sprite = null;
             }
         }
     }
