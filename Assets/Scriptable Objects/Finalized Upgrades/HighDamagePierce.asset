@@ -25,7 +25,7 @@ MonoBehaviour:
   oldBullet: {fileID: 8868396285415600353, guid: a4fcd38b3f007c842bf8260ca804b761,
     type: 3}
   bulletSpeed: 15
-  fireRate: 4
+  fireRate: 1
   ammo: 10000
   damagePerShot: 100
   weaponRange: 50
