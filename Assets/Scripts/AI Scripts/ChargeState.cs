@@ -27,7 +27,6 @@ public class ChargeState : SimpleState
     public override void UpdateState(float _dt)
     {
             base.UpdateState(_dt);
-        
     }
     
 }
