@@ -3969,6 +3969,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGamePaused: 0
   popUpChecker: {fileID: 0}
+  winState: {fileID: 0}
+  loseState: {fileID: 0}
   pauseMenuUI: {fileID: 4488997722415259225}
   healthBar: {fileID: 1676159886463562212}
   powerUpSection: {fileID: 0}
@@ -3987,6 +3989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   didSurviveTime: 0
+  didWin: 0
   playerHealth: {fileID: 0}
   winSection: {fileID: 2530256865054382465}
   healthBar: {fileID: 1676159886463562212}
@@ -4005,6 +4008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerDead: 0
+  didLose: 0
   playerHealth: {fileID: 0}
   loseSection: {fileID: 7969772812324801481}
   healthBar: {fileID: 1676159886463562212}
@@ -4819,7 +4823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.046137344, b: 0.046137344, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4881,12 +4885,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: PopUpChecker, Assembly-CSharp
+        m_MethodName: ClosePopUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
