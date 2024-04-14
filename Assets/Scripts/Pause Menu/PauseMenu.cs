@@ -10,6 +10,9 @@ public class PauseMenu : MonoBehaviour
 
     public PopUpChecker popUpChecker;
 
+    public WinMenu winState;
+    public LoseMenu loseState;
+
     public GameObject pauseMenuUI;
 
     public GameObject healthBar;
@@ -25,7 +28,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && winState.didWin == false && loseState.didLose == false)
         {
             if(isGamePaused)
             {
