@@ -23,6 +23,13 @@ public class UpgradeSystem : MonoBehaviour
         upgrade.PickUp();
         //SetUpgradeText();
         upgradeCount++;
+
+        for (int i = 0; i<upgrades.Count-1;i++)
+        {
+            upgrades[i].active = false;
+        }
+
+        upgrades[upgrades.Count-1].active = true;
        
     }
 
@@ -73,7 +80,7 @@ public class UpgradeSystem : MonoBehaviour
                 current = upgrades[i];
                 current.Passive();
 
-                if (current.active)
+                if (i==upgrades.Count-1)
                 {
                     current.Active();
                 }

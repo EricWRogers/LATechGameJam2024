@@ -275,7 +275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS SPACE TO LEAVE
+  m_text: PRESS ENTER TO LEAVE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 773f833d0a9f6244a9f45738f57cbb12, type: 2}
   m_sharedMaterial: {fileID: 8577302746090097760, guid: 773f833d0a9f6244a9f45738f57cbb12,

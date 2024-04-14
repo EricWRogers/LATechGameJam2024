@@ -29,7 +29,7 @@ public class PopUpChecker : MonoBehaviour
             Debug.Log("Open the Pop Up");
             OpenPopUp();
         }
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Return))
         {
             ClosePopUp();
         }
