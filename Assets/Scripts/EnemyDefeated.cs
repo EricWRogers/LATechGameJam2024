@@ -66,7 +66,7 @@ public class EnemyDefeated : MonoBehaviour
             gameObject.transform.localScale.z <= 0)
             {
                 //Debug.Log("Dead");
-                Destroy(gameObject.transform.parent);
+                Destroy(gameObject.transform.parent.gameObject);
             }
 
         }
