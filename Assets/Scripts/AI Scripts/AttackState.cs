@@ -67,6 +67,9 @@ public class AttackState : SimpleState
                 Debug.Log("Attaking");
                 isAttacking = true;
                 attack.Invoke();
+
+                isAttacking = false;
+                
             }
             if (((BasicEnemyStateMachine)stateMachine).LOS == false)
             {

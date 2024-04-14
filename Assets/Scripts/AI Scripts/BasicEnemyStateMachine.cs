@@ -16,6 +16,8 @@ public class BasicEnemyStateMachine : SimpleStateMachine
     public float attackRange;
     public float attackZone;
 
+    
+
     private void Awake()
     {
         states.Add(moveIn);

@@ -1710,6 +1710,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheatlyCharge
       objectReference: {fileID: 0}
+    - target: {fileID: 1448033945279207436, guid: 2a726029eac6497469d5c33649c1f6f0,
+        type: 3}
+      propertyPath: hitRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448033945279207436, guid: 2a726029eac6497469d5c33649c1f6f0,
+        type: 3}
+      propertyPath: targetMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2076757129312581581, guid: 2a726029eac6497469d5c33649c1f6f0,
         type: 3}
       propertyPath: attack.attack.m_PersistentCalls.m_Calls.Array.size
