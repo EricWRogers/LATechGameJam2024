@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -20,10 +18,14 @@ public class Gun : MonoBehaviour
 
     public int fireMode = 0;
 
+    public GameObject flash1;
+    public GameObject flash2;
+    public GameObject flash3;
+
     private void Start()
     {
         UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
-        if(pausedGame == null)
+        if (pausedGame == null)
         {
             pausedGame = new PauseMenu();
         }
@@ -40,7 +42,7 @@ public class Gun : MonoBehaviour
 
         }
 
-        if(Input.GetButton("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 1 && pausedGame.isGamePaused == false)
+        if (Input.GetButton("Fire1") && Time.time >= nextFireTime && ammo != 0 && fireMode == 1 && pausedGame.isGamePaused == false)
         {
             ShootPrefab();
             ammo--;
@@ -57,9 +59,12 @@ public class Gun : MonoBehaviour
         nextFireTime = Time.time + fireRate;
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+        MuzzleFlash();
         //Rigidbody rigi = bullet.GetComponentInChildren<Rigidbody>();
         //rigi.AddForce(firePoint.forward * bulletSpeed, ForceMode.Impulse);
         Destroy(bullet, 3f);
+
+        Invoke("Delay", .08f);
     }
 
     void ShootRaycast()
@@ -81,4 +86,35 @@ public class Gun : MonoBehaviour
     {
         Destroy(this);
     }
+
+    public void MuzzleFlash()
+    {
+        flash1.SetActive(false);
+        flash2.SetActive(false);
+        flash3.SetActive(false);
+        int rand = Random.Range(0, 2);
+
+        switch (rand)
+        {
+            case 0:
+                flash1.SetActive(true);
+                break;
+            case 1:
+                flash2.SetActive(true);
+                break;
+            case 2: flash3.SetActive(true); 
+                break;
+
+        }
+        
+    }
+
+    void Delay()
+    {
+        flash1.SetActive(false);
+        flash2.SetActive(false);
+        flash3.SetActive(false);
+    }
+
+
 }
