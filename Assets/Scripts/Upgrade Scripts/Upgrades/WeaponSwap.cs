@@ -64,21 +64,11 @@ public class WeaponSwap : Upgrade
 
     public override void Passive()
     {
-        // if(Input.GetKeyDown(KeyCode.J))
-        // {
-        //     if(player.GetComponent<Movement>()!=null)
-        //     {
-                
-        //         player.GetComponent<Movement>().jumpForce += boostValue;
-        //     }
-        // }
+        gun.bulletPrefab.GetComponent<LifeSteal>().recoil = false;
     }
 
     public override void Active()
     {
-        // if(player.GetComponent<Movement>()!=null)
-        // {
-            
-        // }
+        gun.bulletPrefab.GetComponent<LifeSteal>().recoil = recoil;
     }
 }

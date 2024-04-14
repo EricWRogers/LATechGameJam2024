@@ -6,8 +6,9 @@ using UnityEngine;
 public class DashUpgrade : Upgrade
 {
     public float dashCoolDown = 0;
-    public bool recoil;
-    public int recoilDamage = 0;
+    public bool backfire;
+    private bool doBackfire;
+    public int backfireDamage = 0;
     public float dashForce = 0;
     public float nextDashTime = 0;
     public float dashDuration = 2;
@@ -43,11 +44,12 @@ public class DashUpgrade : Upgrade
         {
             Dash();
         }
+        doBackfire = false;
     }
 
     public override void Active()
     {
-        
+        doBackfire = backfire;
     }
 
     void Dash()
@@ -56,9 +58,9 @@ public class DashUpgrade : Upgrade
         player.GetComponent<Movement>().antiSlip = false;
         dashEnd = Time.time + dashDuration;
 
-        if(recoil)
+        if(doBackfire)
         {
-            player.GetComponent<SuperPupSystems.Helper.Health>().Damage(recoilDamage);
+            player.GetComponent<SuperPupSystems.Helper.Health>().Damage(backfireDamage);
         }
 
         player.GetComponent<Rigidbody>().AddForce(GameObject.FindWithTag("Player").GetComponentInChildren<Camera>().gameObject.transform.forward * dashForce,ForceMode.Impulse);
