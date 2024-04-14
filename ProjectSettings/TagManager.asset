@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CANBREAK
   - Ground
+  - HUD
   layers:
   - Default
   - TransparentFX

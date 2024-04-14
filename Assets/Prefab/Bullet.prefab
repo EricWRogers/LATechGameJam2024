@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 3527634230716527032}
   - component: {fileID: 2972864062809839512}
   - component: {fileID: 2672819499430459357}
+  - component: {fileID: 6878632763747908950}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -228,10 +229,38 @@ MonoBehaviour:
   destroyOnImpact: 0
   hitTarget:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6878632763747908950}
+        m_TargetAssemblyTypeName: LifeSteal, Assembly-CSharp
+        m_MethodName: Drain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   mask:
     serializedVersion: 2
     m_Bits: 1
   tags:
   - CANBREAK
   - Critical
+--- !u!114 &6878632763747908950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868396285415600353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622793ed79e93c54a9147735e5ba1035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoil: 0
+  drain: 0
+  recoilDamage: 1
+  lifeStealRatio: 0.5

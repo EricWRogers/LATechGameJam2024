@@ -32,20 +32,28 @@ public class PopUpChecker : MonoBehaviour
     public void OpenPopUp()
     {
         popUp.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        if(playerUpgradeSystem.upgrades != null)
+        {
+            Debug.Log("Here is the Players List of Upgrades" + playerUpgradeSystem.upgrades);
+            if(playerUpgradeSystem.upgrades.Count == 1)
+            {
+                Debug.Log("The Player has an Upgrade");
+                upgradeNameText.text = playerUpgradeSystem.upgrades[0].upgradeName;
+                upgradeDescriptionText.text = playerUpgradeSystem.upgrades[0].upgradeDescription;
+                upgradeIcon.sprite = playerUpgradeSystem.upgrades[0].upgradeSprite;
+            }
+            else if(playerUpgradeSystem.upgrades.Count > 1)
+            {
+                Debug.Log("The Player Aquired a new Upgrade");
+                int lastIndex = playerUpgradeSystem.upgrades.Count-1;
+                upgradeNameText.text = playerUpgradeSystem.upgrades[lastIndex].upgradeName;
+                upgradeDescriptionText.text = playerUpgradeSystem.upgrades[lastIndex].upgradeDescription;
+                upgradeIcon.sprite = playerUpgradeSystem.upgrades[lastIndex].upgradeSprite;
+            }
+        }
         Time.timeScale = 0.0f;
-        if(playerUpgradeSystem.upgrades.Count == 1)
-        {
-            upgradeNameText.text = playerUpgradeSystem.upgrades[0].upgradeName;
-            upgradeDescriptionText.text = playerUpgradeSystem.upgrades[0].upgradeDescription;
-            upgradeIcon.sprite = playerUpgradeSystem.upgrades[0].upgradeSprite;
-        }
-        else if(playerUpgradeSystem.upgrades.Count > 1)
-        {
-            int lastIndex = playerUpgradeSystem.upgrades.Count-1;
-            upgradeNameText.text = playerUpgradeSystem.upgrades[lastIndex].upgradeName;
-            upgradeDescriptionText.text = playerUpgradeSystem.upgrades[lastIndex].upgradeDescription;
-            upgradeIcon.sprite = playerUpgradeSystem.upgrades[lastIndex].upgradeSprite;
-        }
     }
 
     public void ClosePopUp()
@@ -53,5 +61,7 @@ public class PopUpChecker : MonoBehaviour
         popUp.SetActive(false);
         isOpen = false;
         Time.timeScale = 1.0f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
