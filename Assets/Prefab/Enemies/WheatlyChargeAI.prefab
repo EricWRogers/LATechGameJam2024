@@ -184,7 +184,7 @@ MonoBehaviour:
     time: {fileID: 3246376089709358553}
     agent: {fileID: 6668173630009856427}
     power: 10
-    radius: 500
+    radius: 10
     dmg: 5
   LOS: 0
   target: {fileID: 0}
@@ -5164,8 +5164,8 @@ MonoBehaviour:
           m_StringArgument: WheatlyDamaged
           m_BoolArgument: 0
         m_CallState: 2
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 5
+  currentHealth: 5
 --- !u!114 &6856024801609365363
 MonoBehaviour:
   m_ObjectHideFlags: 0

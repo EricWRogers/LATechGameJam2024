@@ -247,6 +247,7 @@ MonoBehaviour:
     m_Bits: 1
   tags:
   - CANBREAK
+  - Critical
 --- !u!114 &6878632763747908950
 MonoBehaviour:
   m_ObjectHideFlags: 0

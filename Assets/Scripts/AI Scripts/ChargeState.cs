@@ -7,7 +7,6 @@ using UnityEngine.AI;
 using UnityEngine.Events;
 using static UnityEngine.GraphicsBuffer;
 
-
 [System.Serializable]
 public class ChargeState : SimpleState
 {
