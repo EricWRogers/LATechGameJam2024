@@ -54,7 +54,7 @@ public class Gun : MonoBehaviour
         }
         else
         {
-            anim.StopPlayback();
+            //anim.StopPlayback();
         }
 
         if (Input.GetKeyDown(KeyCode.R) && pausedGame.isGamePaused == false)
