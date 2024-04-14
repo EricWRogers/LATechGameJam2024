@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3456882020484777695}
   - component: {fileID: 3018154112593348681}
-  - component: {fileID: 1835907923014998212}
+  - component: {fileID: 2645823412619961212}
   m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
@@ -212,7 +212,10 @@ MonoBehaviour:
   flash1: {fileID: 1238904037095825548}
   flash2: {fileID: 1667160238499374115}
   flash3: {fileID: 9008996933562886544}
---- !u!95 &1835907923014998212
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!95 &2645823412619961212
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -841,7 +844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 2
   baseSpeed: 8
   maxVec: 10
   sprintSpeedMultiplier: 2
