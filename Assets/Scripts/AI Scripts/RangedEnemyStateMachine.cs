@@ -4,8 +4,6 @@ using UnityEngine;
 using SuperPupSystems.Helper;
 using SuperPupSystems.StateMachine;
 using UnityEngine.AI;
-using static UnityEditor.VersionControl.Asset;
-using static UnityEditor.PlayerSettings;
 
 public class RangedEnemyStateMachine : SimpleStateMachine
 {

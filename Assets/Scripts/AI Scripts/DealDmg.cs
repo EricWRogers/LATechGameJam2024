@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DealDmg : MonoBehaviour
 {
+    public float hitRadius;
+    public LayerMask targetMask;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class DealDmg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if ()
+        Physics.OverlapSphere(transform.position, hitRadius, targetMask);
     }
 }
