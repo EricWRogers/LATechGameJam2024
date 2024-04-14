@@ -2,11 +2,14 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
+#if(UNITY_EDITOR)
 [CustomEditor(typeof(FOV))]
 public class FOVEditor : Editor
 {
+    
     private void OnSceneGUI()
     {
+        
         FOV fov = (FOV)target;
         Handles.color = Color.white;
         Handles.DrawWireArc(fov.transform.position, Vector3.up, Vector3.forward, 360, fov.viewRadius);
@@ -19,6 +22,9 @@ public class FOVEditor : Editor
         {
             Handles.DrawLine(fov.transform.position, visibleTarget.position);
         }
-
+        
     }
+    
 }
+#else
+#endif

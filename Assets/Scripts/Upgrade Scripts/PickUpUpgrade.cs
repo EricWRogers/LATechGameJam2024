@@ -6,13 +6,15 @@ public class PickUpUpgrade : MonoBehaviour
 {
     public UpgradeSystem upgradeSystem;
     public UpgradeHolder upgradeHolder;
+    public GameObject popup;
     // Start is called before the first frame update
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            upgradeSystem.AddUpgrade(upgradeHolder.upgrade);
+            popup.SetActive(true);
+            upgradeSystem.AddUpgrade(upgradeHolder.upgrade1);
             Destroy(gameObject);
         }
     }

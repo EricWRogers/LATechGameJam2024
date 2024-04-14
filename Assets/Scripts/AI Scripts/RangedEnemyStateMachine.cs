@@ -4,8 +4,6 @@ using UnityEngine;
 using SuperPupSystems.Helper;
 using SuperPupSystems.StateMachine;
 using UnityEngine.AI;
-using static UnityEditor.VersionControl.Asset;
-using static UnityEditor.PlayerSettings;
 
 public class RangedEnemyStateMachine : SimpleStateMachine
 {
@@ -13,8 +11,7 @@ public class RangedEnemyStateMachine : SimpleStateMachine
     public AttackState shoot;
 
     public bool LOS;
-    public float attackRange;
-    public float attackZone;
+    //public float attackZone;
     public Transform target;
 
     private void Awake()

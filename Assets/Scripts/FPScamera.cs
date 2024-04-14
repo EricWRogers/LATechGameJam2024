@@ -21,7 +21,7 @@ public class FPScamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if(pausedGame.isGamePaused == false)
         {
@@ -33,15 +33,15 @@ public class FPScamera : MonoBehaviour
 
     private void MouseMovement()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
         player.Rotate(Vector3.up * mouseX);
        
 
 
         rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, -90f, 30f);
+        rotationX = Mathf.Clamp(rotationX, -90f, 60f);
         
 
 
