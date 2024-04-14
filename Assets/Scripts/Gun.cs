@@ -48,7 +48,7 @@ public class Gun : MonoBehaviour
         {
             ShootPrefab();
             //ShootRaycast();
-
+       
             ammo--;
 
         }
