@@ -18,10 +18,13 @@ public class MoveInRangeState : SimpleState
         {
             agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
         }
-
         if (stateMachine is BasicEnemyStateMachine)
         {
             agent.SetDestination(((BasicEnemyStateMachine)stateMachine).target.position);
+        }
+        if (stateMachine is ChargeStatMachine)
+        {
+            agent.SetDestination(((ChargeStatMachine)stateMachine).target.position);
         }
     }
 
@@ -42,6 +45,14 @@ public class MoveInRangeState : SimpleState
             if (((BasicEnemyStateMachine)stateMachine).LOS)
             {
                 stateMachine.ChangeState(nameof(AttackState));
+            }
+        }
+        if (stateMachine is ChargeStatMachine)
+        {
+            agent.SetDestination(((ChargeStatMachine)stateMachine).target.position);
+            if (((ChargeStatMachine)stateMachine).LOS)
+            {
+                stateMachine.ChangeState(nameof(ChargeState));
             }
         }
     }

@@ -20794,7 +20794,6 @@ GameObject:
   - component: {fileID: 4499371333322747267}
   - component: {fileID: 2041534507267789544}
   - component: {fileID: 6268703156147596302}
-  - component: {fileID: 6970432076173787930}
   m_Layer: 0
   m_Name: WheatlyHenchAI
   m_TagString: CANBREAK
@@ -20892,10 +20891,10 @@ MonoBehaviour:
             m_StringArgument: WheatlyPunch
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 3530417902579323955}
-          m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-          m_MethodName: Play
-          m_Mode: 5
+        - m_Target: {fileID: 7130133591127671689}
+          m_TargetAssemblyTypeName: Setter, Assembly-CSharp
+          m_MethodName: SetTwo
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -20954,22 +20953,6 @@ MonoBehaviour:
     m_Bits: 64
   visibleTargets: []
   targetsInSight: 0
---- !u!114 &6970432076173787930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4027015583044046712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05c90541d6704e14bb3f5802914beca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitRadius: 0
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &4960410850842681058
 GameObject:
   m_ObjectHideFlags: 0

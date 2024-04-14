@@ -7,6 +7,7 @@ public class PickUpUpgrade : MonoBehaviour
     public UpgradeSystem upgradeSystem;
     public UpgradeHolder upgradeHolder;
     public GameObject popup;
+    //public UpgradeDatabase dataBase;
     
     // Start is called before the first frame update
 
@@ -14,11 +15,13 @@ public class PickUpUpgrade : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            popup.SetActive(true);
-            Time.timeScale = 0f;
-            upgradeSystem.AddUpgrade(upgradeHolder.upgrade1);
+            upgradeSystem = other.gameObject.GetComponent<UpgradeSystem>();
+            //Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+            //popup.SetActive(true);
+            //dataBase.OpenPopUp();
+            //Time.timeScale = 0f;
+            upgradeSystem.AddUpgrade(upgradeHolder.upgrade);
             Destroy(gameObject);
         }
     }
