@@ -25302,7 +25302,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_Name
-      value: Toon Muzzleflash 12 (2)
+      value: Flash3L
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_IsActive
@@ -25448,7 +25448,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_Name
-      value: Toon Muzzleflash 12 (1)
+      value: Flash1L
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_IsActive
@@ -25594,7 +25594,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 302577c4c425ce14781bc5dd214f5576, type: 3}
       propertyPath: m_Name
-      value: Toon Muzzleflash 1
+      value: Flash2L
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 302577c4c425ce14781bc5dd214f5576, type: 3}
       propertyPath: m_IsActive
@@ -25740,7 +25740,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_Name
-      value: Toon Muzzleflash 12 (2)
+      value: Flash3R
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_IsActive
@@ -25886,7 +25886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_Name
-      value: Toon Muzzleflash 12 (1)
+      value: Flash1R
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: b11531b8eca86ad43a1931bd652b0c61, type: 3}
       propertyPath: m_IsActive
@@ -26032,7 +26032,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 302577c4c425ce14781bc5dd214f5576, type: 3}
       propertyPath: m_Name
-      value: Toon Muzzleflash 1
+      value: Flash2R
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 302577c4c425ce14781bc5dd214f5576, type: 3}
       propertyPath: m_IsActive

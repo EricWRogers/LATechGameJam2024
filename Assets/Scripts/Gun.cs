@@ -18,12 +18,17 @@ public class Gun : MonoBehaviour
 
     public int fireMode = 0;
 
+    private Animator anim;
+    
+
     public GameObject flash1;
     public GameObject flash2;
     public GameObject flash3;
 
     private void Start()
     {
+
+        anim = GetComponent<Animator>();
         UnityEngine.Rendering.DebugManager.instance.enableRuntimeUI = false;
         if (pausedGame == null)
         {
@@ -47,6 +52,10 @@ public class Gun : MonoBehaviour
             ShootPrefab();
             ammo--;
         }
+        else
+        {
+            anim.StopPlayback();
+        }
 
         if (Input.GetKeyDown(KeyCode.R) && pausedGame.isGamePaused == false)
         {
@@ -60,6 +69,7 @@ public class Gun : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
         MuzzleFlash();
+        anim.Play("Recoil");
         //Rigidbody rigi = bullet.GetComponentInChildren<Rigidbody>();
         //rigi.AddForce(firePoint.forward * bulletSpeed, ForceMode.Impulse);
         Destroy(bullet, 3f);

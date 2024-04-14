@@ -31,6 +31,7 @@ public class Movement : MonoBehaviour
     public float upDownRange = 60.0f;
     float verticalRotation = 0;
 
+    public bool isSprinting;
 
 
     // Start is called before the first frame update
@@ -48,14 +49,17 @@ public class Movement : MonoBehaviour
         input.Normalize();
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            isSprinting = true;
             moveSpeed = baseSpeed * sprintSpeedMultiplier;
         }
         else if (!(Input.GetKey(KeyCode.LeftShift)))
         {
+            isSprinting = false;
             moveSpeed = baseSpeed;
         }
         else
         {
+            isSprinting = false;
             moveSpeed = baseSpeed;   
         }
 
