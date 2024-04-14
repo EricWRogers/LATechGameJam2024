@@ -6,7 +6,7 @@ public class EnemyDefeated : MonoBehaviour
     public float delay = 10f;
     private Rigidbody rigi;
     private Animator anim;
-    private ParticleSystem particle;
+    public ParticleSystem particle;
     private Light light;
     public NavMeshAgent agent;
 
@@ -33,7 +33,7 @@ public class EnemyDefeated : MonoBehaviour
             spareParticle.enableEmission = false;
         }
         agent.enabled = false;
-
+        particle.enableEmission = false;
 
 
 
