@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewUpgrade", menuName = "Upgrades/JumpBoost")]
+[CreateAssetMenu(fileName = "NewUpgrade", menuName = "Upgrades/Movement/JumpBoost")]
 public class JumpBoostUpgrade : Upgrade
 {
     public float boostValue = 0;
