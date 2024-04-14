@@ -26,11 +26,12 @@ public class Movement : MonoBehaviour
     public GameObject groundCheck;
     public UpgradeSystem upgradeSystem;
     public float mag;
-    public bool antiSlip;
+    public bool antiSlip = true;
     public float mouseSensitivity = 2.0f;
     public float upDownRange = 60.0f;
     float verticalRotation = 0;
 
+    public bool isSprinting;
 
 
     // Start is called before the first frame update
@@ -48,14 +49,17 @@ public class Movement : MonoBehaviour
         input.Normalize();
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            isSprinting = true;
             moveSpeed = baseSpeed * sprintSpeedMultiplier;
         }
         else if (!(Input.GetKey(KeyCode.LeftShift)))
         {
+            isSprinting = false;
             moveSpeed = baseSpeed;
         }
         else
         {
+            isSprinting = false;
             moveSpeed = baseSpeed;   
         }
 
@@ -114,7 +118,7 @@ public class Movement : MonoBehaviour
         verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
         Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
 
-        if (mag > 0.5f)
+        if (mag > 0.5f&& antiSlip)
         {
             Vector3 velocityChange = targetVelocity - velocity;
 
@@ -125,15 +129,11 @@ public class Movement : MonoBehaviour
 
             return (velocityChange);
         }
-        else //if(/*antiSlip*/)
+        else
         {
             return new Vector3();
         }
-        // else
-        // {
-        //     return velocity;
-        // }
-
+        
 
     }
 
