@@ -53,8 +53,8 @@ MonoBehaviour:
   - {fileID: 3381175789467260646}
   - {fileID: 4096304898531910017}
   - {fileID: 2861486583185036412}
-  timeBetweenSpawns: 10
-  nextSpawnTime: 10
+  timeBetweenSpawns: 60
+  nextSpawnTime: 0
   spawnPointIndex: 0
   upgrades:
   - {fileID: 11400000, guid: 0262dee80d1ad6e4fb7fa70e6f1b1fea, type: 2}
