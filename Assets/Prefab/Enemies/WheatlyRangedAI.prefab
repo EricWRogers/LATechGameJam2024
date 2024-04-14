@@ -35,8 +35,6 @@ Transform:
   m_Children:
   - {fileID: 6015217762917177402}
   - {fileID: 3322981433295294235}
-  - {fileID: 6417494227293546813}
-  - {fileID: 7271596896280563618}
   m_Father: {fileID: 8241798842552562134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5458534241870249579
@@ -10193,12 +10191,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4585481772348564758}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7660445, z: 0, w: 0.64278764}
-  m_LocalPosition: {x: -2.183, y: -0.061, z: 1.455}
+  m_LocalRotation: {x: -0, y: -0.76604444, z: -0, w: 0.6427877}
+  m_LocalPosition: {x: -2.182991, y: -0.061000824, z: 1.4550017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4831048611535795256}
+  m_Father: {fileID: 6015217762917177402}
   m_LocalEulerAnglesHint: {x: 0, y: -100, z: 0}
 --- !u!114 &7725028210680011148
 MonoBehaviour:
@@ -15373,6 +15371,8 @@ Transform:
   - {fileID: 2130988106095117958}
   - {fileID: 4039356926624140917}
   - {fileID: 1347566123849682892}
+  - {fileID: 6417494227293546813}
+  - {fileID: 7271596896280563618}
   m_Father: {fileID: 4831048611535795256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &5977637593408332754
@@ -25287,12 +25287,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8831357793935509793}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.6427876, z: 0, w: 0.7660445}
-  m_LocalPosition: {x: -2.0300002, y: -0.06099999, z: -1.42}
+  m_LocalRotation: {x: -0, y: -0.6427876, z: -0, w: 0.76604444}
+  m_LocalPosition: {x: -2.0300007, y: -0.061000824, z: -1.4200032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4831048611535795256}
+  m_Father: {fileID: 6015217762917177402}
   m_LocalEulerAnglesHint: {x: 0, y: -80, z: 0}
 --- !u!114 &1626841967300357511
 MonoBehaviour:
@@ -25309,7 +25309,7 @@ MonoBehaviour:
   timer: 1
   Bullet_Enemy: {fileID: 8868396285415600353, guid: 21f491fb1488ada4fbb80ac07f44cdf0,
     type: 3}
-  bulletTime: 1
+  bulletTime: 1.5
   spawnPoint: {fileID: 7271596896280563618}
   flash1: {fileID: 2780385466021135119}
   flash2: {fileID: 5674940063073316677}
