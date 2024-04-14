@@ -17,6 +17,7 @@ public class LoseMenu : MonoBehaviour
     public GameObject healthBar;
     public GameObject PowerUpSection;
     public GameObject TMSection;
+    public GameObject reticle;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class LoseMenu : MonoBehaviour
         healthBar.SetActive(false);
         PowerUpSection.SetActive(false);
         TMSection.SetActive(false);
+        reticle.SetActive(false);
         Time.timeScale = 0.0f;
     }
 

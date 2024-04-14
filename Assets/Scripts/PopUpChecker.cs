@@ -7,6 +7,8 @@ using TMPro;
 public class PopUpChecker : MonoBehaviour
 {
     public GameObject popUp;
+    public GameObject reticle;
+
     public UpgradeSystem playerUpgradeSystem;
     
     public bool isOpen = false;
@@ -36,8 +38,9 @@ public class PopUpChecker : MonoBehaviour
     public void OpenPopUp()
     {
         popUp.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        reticle.SetActive(false);
+        // Cursor.lockState = CursorLockMode.None;
+        // Cursor.visible = true;
         if(playerUpgradeSystem.upgrades != null)
         {
             Debug.Log("Here is the Players List of Upgrades" + playerUpgradeSystem.upgrades);
@@ -65,7 +68,6 @@ public class PopUpChecker : MonoBehaviour
         popUp.SetActive(false);
         isOpen = false;
         Time.timeScale = 1.0f;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        reticle.SetActive(true);
     }
 }

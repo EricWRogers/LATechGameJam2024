@@ -1716,6 +1716,11 @@ PrefabInstance:
       objectReference: {fileID: 7360062061516450182}
     - target: {fileID: 8293015961041386500, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
+      propertyPath: popUpChecker
+      value: 
+      objectReference: {fileID: 8467269870215679069}
+    - target: {fileID: 8293015961041386500, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
       propertyPath: popUpSection
       value: 
       objectReference: {fileID: 7359898257120566657}
@@ -1876,6 +1881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUp: {fileID: 7359898257120566657}
+  reticle: {fileID: 7634117466714258348}
   playerUpgradeSystem: {fileID: 2488344022149906058}
   isOpen: 0
   upgradeNameText: {fileID: 7699585353640838755}
@@ -1956,6 +1962,12 @@ GameObject:
 --- !u!1 &7360062061516450182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2195125089076355886, guid: f35632d41f56f744a9e3f322561f0bad,
+    type: 3}
+  m_PrefabInstance: {fileID: 8670159154372266664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7634117466714258348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1270932860700619012, guid: f35632d41f56f744a9e3f322561f0bad,
     type: 3}
   m_PrefabInstance: {fileID: 8670159154372266664}
   m_PrefabAsset: {fileID: 0}
