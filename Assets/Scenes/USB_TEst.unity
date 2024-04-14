@@ -320,6 +320,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3018154112593348681, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: fireSound
+      value: 
+      objectReference: {fileID: 1905459857}
+    - target: {fileID: 5461628554647355003, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5986635869959824606, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
       propertyPath: m_Name
@@ -9743,6 +9753,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4975438917201134308, guid: c90018b101b0ddaf8ae495808643b725,
     type: 3}
   m_PrefabInstance: {fileID: 948218256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1905459857 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5461628554647355003, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 78349574}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1946779288
 PrefabInstance:
