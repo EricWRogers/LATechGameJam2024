@@ -16,7 +16,7 @@ MonoBehaviour:
   active: 0
   upgradeName: Gun 2
   upgradeDescription: Buff :Bullets life drain. Debuff:Takes health to fire.
-  upgradeSprite: {fileID: 247516908, guid: bf3e7a8099749784c86981fa30215aa5, type: 3}
+  upgradeSprite: {fileID: -1354489458, guid: bf3e7a8099749784c86981fa30215aa5, type: 3}
   newColor: {r: 0, g: 0, b: 0, a: 0}
   dropChance: 0
   newBullet: {fileID: 8868396285415600353, guid: 70d15540553095b4682022d94619d695,
