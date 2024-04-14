@@ -16,15 +16,18 @@ public class MoveInRangeState : SimpleState
         base.OnStart();
         if (stateMachine is RangedEnemyStateMachine)
         {
-            agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
+            if(((RangedEnemyStateMachine)stateMachine).isAlive == true)
+                agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
         }
         if (stateMachine is BasicEnemyStateMachine)
         {
-            agent.SetDestination(((BasicEnemyStateMachine)stateMachine).target.position);
+            if (((BasicEnemyStateMachine)stateMachine).isAlive == true)
+                agent.SetDestination(((BasicEnemyStateMachine)stateMachine).target.position);
         }
         if (stateMachine is ChargeStatMachine)
         {
-            agent.SetDestination(((ChargeStatMachine)stateMachine).target.position);
+            if (((ChargeStatMachine)stateMachine).isAlive == true)
+                agent.SetDestination(((ChargeStatMachine)stateMachine).target.position);
         }
     }
 
@@ -32,27 +35,36 @@ public class MoveInRangeState : SimpleState
     {
         if (stateMachine is RangedEnemyStateMachine)
         {
-            agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
-            if (((RangedEnemyStateMachine)stateMachine).LOS)
+            if (((RangedEnemyStateMachine)stateMachine).isAlive == true)
             {
-                stateMachine.ChangeState(nameof(AttackState));
+                agent.SetDestination(((RangedEnemyStateMachine)stateMachine).target.position);
+                if (((RangedEnemyStateMachine)stateMachine).LOS)
+                {
+                    stateMachine.ChangeState(nameof(AttackState));
+                }
             }
         }
 
         if (stateMachine is BasicEnemyStateMachine)
         {
-            agent.SetDestination(((BasicEnemyStateMachine)stateMachine).target.position);
-            if (((BasicEnemyStateMachine)stateMachine).LOS)
-            {
-                stateMachine.ChangeState(nameof(AttackState));
+            if (((BasicEnemyStateMachine)stateMachine).isAlive == true)
+            { 
+                agent.SetDestination(((BasicEnemyStateMachine)stateMachine).target.position);
+                if (((BasicEnemyStateMachine)stateMachine).LOS)
+                {
+                    stateMachine.ChangeState(nameof(AttackState));
+                }
             }
         }
         if (stateMachine is ChargeStatMachine)
         {
-            agent.SetDestination(((ChargeStatMachine)stateMachine).target.position);
-            if (((ChargeStatMachine)stateMachine).LOS)
+            if (((ChargeStatMachine)stateMachine).isAlive == true)
             {
-                stateMachine.ChangeState(nameof(ChargeState));
+                agent.SetDestination(((ChargeStatMachine)stateMachine).target.position);
+                if (((ChargeStatMachine)stateMachine).LOS)
+                {
+                    stateMachine.ChangeState(nameof(ChargeState));
+                }
             }
         }
     }
