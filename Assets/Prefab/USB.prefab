@@ -88,6 +88,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7694022346331094334}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f4f2ac6c5bc23a87780e623c89d67baa,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6127672881930406227}
   m_SourcePrefab: {fileID: 100100000, guid: f4f2ac6c5bc23a87780e623c89d67baa, type: 3}
 --- !u!1 &5293312419511192015 stripped
 GameObject:
@@ -128,9 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eebfdafdb01fdc4d86a4603310cc109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrade1: {fileID: 11400000, guid: bda60649b17ecde4a8eaaf64651e09b9, type: 2}
-  upgrade2: {fileID: 11400000, guid: bda60649b17ecde4a8eaaf64651e09b9, type: 2}
-  upgrade3: {fileID: 11400000, guid: 0262dee80d1ad6e4fb7fa70e6f1b1fea, type: 2}
+  upgrade: {fileID: 0}
 --- !u!114 &3518357935716234965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +148,7 @@ MonoBehaviour:
   upgradeSystem: {fileID: 2488344022149906058, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
     type: 3}
   upgradeHolder: {fileID: 6548458126504879074}
-  popup: {fileID: 0}
+  popUpChecker: {fileID: 0}
 --- !u!114 &7694022346331094334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +163,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 1
+--- !u!114 &6127672881930406227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5293312419511192015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02cf75d4d09ade34a9ec11081d21d3cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpChecker: {fileID: 0}

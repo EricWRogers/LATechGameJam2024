@@ -8,12 +8,17 @@ public class PauseMenu : MonoBehaviour
 {
     public bool isGamePaused = false;
 
+    public PopUpChecker popUpChecker;
+
+    public WinMenu winState;
+    public LoseMenu loseState;
+
     public GameObject pauseMenuUI;
 
     public GameObject healthBar;
-    public GameObject PowerUpSection;
-    public GameObject TMSection;
-    public GameObject GunSection;
+    public GameObject powerUpSection;
+    public GameObject tMSection;
+    public GameObject popUpSection;
 
     void Start()
     {
@@ -23,7 +28,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && winState.didWin == false && loseState.didLose == false)
         {
             if(isGamePaused)
             {
@@ -42,9 +47,12 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
         pauseMenuUI.SetActive(false);
         healthBar.SetActive(true);
-        GunSection.SetActive(true);
-        PowerUpSection.SetActive(true);
-        TMSection.SetActive(true);
+        powerUpSection.SetActive(true);
+        tMSection.SetActive(true);
+        if(popUpChecker != null && popUpChecker.isOpen == true)
+        {
+            popUpChecker.OpenPopUp();
+        }
         Time.timeScale = 1.0f;
         isGamePaused = false;
     }
@@ -55,9 +63,9 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);
         healthBar.SetActive(false);
-        GunSection.SetActive(false);
-        PowerUpSection.SetActive(false);
-        TMSection.SetActive(false);
+        powerUpSection.SetActive(false);
+        tMSection.SetActive(false);
+        popUpSection.SetActive(false);
         Time.timeScale = 0.0f;
         isGamePaused = true;
     }
