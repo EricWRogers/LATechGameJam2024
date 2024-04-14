@@ -8,6 +8,7 @@ using SuperPupSystems.Helper;
 public class WinMenu : MonoBehaviour
 {
     public bool didSurviveTime = false;
+    public bool didWin = false;
 
     public Health playerHealth;
 
@@ -42,6 +43,7 @@ public class WinMenu : MonoBehaviour
     public void Win()
     {
         Debug.Log("You have WON!");
+        didWin = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         winSection.SetActive(true);

@@ -1368,21 +1368,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8467269870215679069}
-    - target: {fileID: 1341801359590047547, guid: f35632d41f56f744a9e3f322561f0bad,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClosePopUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341801359590047547, guid: f35632d41f56f744a9e3f322561f0bad,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PopUpChecker, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341801359590047547, guid: f35632d41f56f744a9e3f322561f0bad,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1846564743340509239, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
