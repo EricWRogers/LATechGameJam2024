@@ -5191,6 +5191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 10
+  particle: {fileID: 2066686108602651188}
   agent: {fileID: 6668173630009856427}
   particleExplode: {fileID: 7076343278086110101}
   spareParticle: {fileID: 985656514120143754}
