@@ -15,7 +15,8 @@ MonoBehaviour:
   count: 0
   active: 1
   upgradeName: Chrome Leech
-  upgradeDescription: 
+  upgradeDescription: A weapon that takes health to shoot, but fires quickly, deals
+    more damage, and heals you for the damage it deals.
   upgradeSprite: {fileID: -1354489458, guid: bf3e7a8099749784c86981fa30215aa5, type: 3}
   newColor: {r: 0, g: 0, b: 0, a: 0}
   dropChance: 0
