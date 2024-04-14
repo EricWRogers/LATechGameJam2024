@@ -26101,7 +26101,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 5
-  playerHealth: {fileID: 5745196980506287752}
+  playerHealth: {fileID: 0}
+  attackState:
+    stateStart:
+      m_PersistentCalls:
+        m_Calls: []
+    stateUpdated:
+      m_PersistentCalls:
+        m_Calls: []
+    stateExited:
+      m_PersistentCalls:
+        m_Calls: []
+    stateMachine: {fileID: 0}
+    time: {fileID: 0}
+    attack:
+      m_PersistentCalls:
+        m_Calls: []
+    stopAttacking:
+      m_PersistentCalls:
+        m_Calls: []
+    agent: {fileID: 0}
+    isAttacking: 0
 --- !u!1 &5537407976543809405
 GameObject:
   m_ObjectHideFlags: 0
