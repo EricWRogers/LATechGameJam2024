@@ -17,8 +17,6 @@ public class Setter : MonoBehaviour
         }
         Debug.Log("Enemy attacking");
         playerHealth.Damage(dmg);
-
-    
     }
 
 }
