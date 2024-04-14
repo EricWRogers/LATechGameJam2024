@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1330,7 +1330,7 @@ MonoBehaviour:
   m_text: PLAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d6b366cb8475694b824227c95af26a7, type: 2}
-  m_sharedMaterial: {fileID: -825154453739846823, guid: 2d6b366cb8475694b824227c95af26a7,
+  m_sharedMaterial: {fileID: 7299937634246889276, guid: 2d6b366cb8475694b824227c95af26a7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6500,25 +6500,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3018154112593348681, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: pausedGame
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5986635869959824606, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5986635869959824606, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9010230052708564299, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
-        type: 3}
-      propertyPath: pausedGame
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6855,7 +6840,7 @@ MonoBehaviour:
   m_text: CROWN OF SCREWS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d6b366cb8475694b824227c95af26a7, type: 2}
-  m_sharedMaterial: {fileID: -825154453739846823, guid: 2d6b366cb8475694b824227c95af26a7,
+  m_sharedMaterial: {fileID: 7299937634246889276, guid: 2d6b366cb8475694b824227c95af26a7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6990,7 +6975,7 @@ MonoBehaviour:
   m_text: EXIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d6b366cb8475694b824227c95af26a7, type: 2}
-  m_sharedMaterial: {fileID: -825154453739846823, guid: 2d6b366cb8475694b824227c95af26a7,
+  m_sharedMaterial: {fileID: 7299937634246889276, guid: 2d6b366cb8475694b824227c95af26a7,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 3246376089709358553}
   - component: {fileID: 1031417549060655891}
   m_Layer: 0
-  m_Name: WheatlyCharge
+  m_Name: WheatlyChargeAI
   m_TagString: CANBREAK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29596,7 +29596,7 @@ GameObject:
   - component: {fileID: 1328422528586371654}
   m_Layer: 0
   m_Name: WHEATLYCHARGE
-  m_TagString: Untagged
+  m_TagString: CANBREAK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
