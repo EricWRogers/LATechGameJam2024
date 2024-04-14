@@ -6,21 +6,15 @@ public class PickUpUpgrade : MonoBehaviour
 {
     public UpgradeSystem upgradeSystem;
     public UpgradeHolder upgradeHolder;
-    public GameObject popup;
-    //public UpgradeDatabase dataBase;
-    
-    // Start is called before the first frame update
+    public PopUpChecker popUpChecker;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             upgradeSystem = other.gameObject.GetComponent<UpgradeSystem>();
-            //Cursor.lockState = CursorLockMode.None;
-            //Cursor.visible = true;
-            //popup.SetActive(true);
-            //dataBase.OpenPopUp();
-            //Time.timeScale = 0f;
+            popUpChecker = FindObjectOfType<PopUpChecker>();
+            popUpChecker.isOpen = true;
             upgradeSystem.AddUpgrade(upgradeHolder.upgrade);
             Destroy(gameObject);
         }
