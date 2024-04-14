@@ -408,6 +408,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: outOfHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892953045110323924, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: healthChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018154112593348681, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: pausedGame
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5986635869959824606, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
       propertyPath: m_Name
@@ -416,7 +431,7 @@ PrefabInstance:
     - target: {fileID: 5986635869959824606, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6021452696758751044, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
@@ -432,6 +447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpForce
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9010230052708564299, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
+        type: 3}
+      propertyPath: pausedGame
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9010230052708564299, guid: 849061c6fb7c0a14b8c5a0c93589d3d8,
         type: 3}
@@ -18966,6 +18986,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3171028873659096532, guid: 71bffd145e620cd479ffa8f17f643fa9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3953633617186029210, guid: 71bffd145e620cd479ffa8f17f643fa9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19024,12 +19049,12 @@ PrefabInstance:
     - target: {fileID: 6199329904685688170, guid: 71bffd145e620cd479ffa8f17f643fa9,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6199329904685688170, guid: 71bffd145e620cd479ffa8f17f643fa9,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7121720219937183701, guid: 71bffd145e620cd479ffa8f17f643fa9,
         type: 3}
