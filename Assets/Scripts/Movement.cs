@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
     public GameObject groundCheck;
     public UpgradeSystem upgradeSystem;
     public float mag;
-    public bool antiSlip;
+    public bool antiSlip = true;
     public float mouseSensitivity = 2.0f;
     public float upDownRange = 60.0f;
     float verticalRotation = 0;
@@ -125,14 +125,14 @@ public class Movement : MonoBehaviour
 
             return (velocityChange);
         }
-        else //if(/*antiSlip*/)
+        else if(antiSlip)
         {
             return new Vector3();
         }
-        // else
-        // {
-        //     return velocity;
-        // }
+        else
+        {
+            return velocity;
+        }
 
 
     }
