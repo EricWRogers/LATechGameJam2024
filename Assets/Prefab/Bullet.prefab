@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  critDamage: 3
   speed: 40
   lifeTime: 10
   destroyOnImpact: 0

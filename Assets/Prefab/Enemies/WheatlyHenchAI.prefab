@@ -10032,9 +10032,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5747259831119803157}
+  - component: {fileID: 2317443207698767548}
   m_Layer: 0
   m_Name: GFX
-  m_TagString: Untagged
+  m_TagString: Critical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10060,6 +10061,27 @@ Transform:
   - {fileID: 524842071550697080}
   m_Father: {fileID: 7817890025728604389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2317443207698767548
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967728761009555388}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: -0.8, y: 0, z: 0}
 --- !u!1 &1772628687849979932
 GameObject:
   m_ObjectHideFlags: 0
@@ -15389,7 +15411,7 @@ MonoBehaviour:
           m_StringArgument: WheatlyDamaged
           m_BoolArgument: 0
         m_CallState: 2
-  maxHealth: 10
+  maxHealth: 50
   currentHealth: 10
 --- !u!114 &3436579820413064249
 MonoBehaviour:
@@ -26007,7 +26029,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5474674612844955748}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3e8bf7c154834d74d8eda97faf5ecd24, type: 2}
   m_CullingMode: 0
