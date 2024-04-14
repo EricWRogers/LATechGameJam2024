@@ -668,7 +668,7 @@ MonoBehaviour:
         m_CallState: 2
   mask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 9
   tags:
   - CANBREAK
 --- !u!114 &5052871861525345962
@@ -684,4 +684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoil: 1
+  drain: 0
+  recoilDamage: 1
   lifeStealRatio: 0.5
