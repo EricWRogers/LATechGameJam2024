@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CANBREAK
   - Ground
+  - Critical
   layers:
   - Default
   - TransparentFX
