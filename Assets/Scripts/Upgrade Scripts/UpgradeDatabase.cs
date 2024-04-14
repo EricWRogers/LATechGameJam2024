@@ -49,8 +49,8 @@ public class UpgradeDatabase : MonoBehaviour
         ShuffleList(upgrades);
         // Spawn the next object in the list
         GameObject objToSpawn = objectsToSpawn[spawnPointIndex % objectsToSpawn.Count];
-        Instantiate(objToSpawn, spawnPoints[spawnPointIndex].position, Quaternion.identity);
-        objToSpawn.GetComponent<UpgradeHolder>().upgrade = upgrades[0];
+        GameObject g = Instantiate(objToSpawn, spawnPoints[spawnPointIndex].position, Quaternion.identity);
+        g.GetComponent<UpgradeHolder>().upgrade = upgrades[0];
     }
 
     private void ShuffleList<T>(List<T> list)
