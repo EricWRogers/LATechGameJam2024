@@ -1,0 +1,418 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1336961259192980916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7990743148176110737}
+  - component: {fileID: 1786926888849107659}
+  m_Layer: 0
+  m_Name: WaveSpawner (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7990743148176110737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336961259192980916}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -125.2982, y: 4.7315865, z: -155.29184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8426453093394882782}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1786926888849107659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336961259192980916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74590107d8f0cb04ca35cb67f4d9c0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  timeBetweenSpawns: 10
+  timeBetweenWaves: 20
+  totalWaves: 3
+--- !u!1 &1537619520902260652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8426453093394882782}
+  m_Layer: 0
+  m_Name: EnemyWaveSpawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8426453093394882782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537619520902260652}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 219.4982, y: 32.091957, z: 325.79184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6962911382975954711}
+  - {fileID: 2539255429546702828}
+  - {fileID: 4275125978025053283}
+  - {fileID: 2481397655139394759}
+  - {fileID: 7990743148176110737}
+  - {fileID: 7716069555934428972}
+  - {fileID: 2687887393146133863}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1692783645999832585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7716069555934428972}
+  - component: {fileID: 2106662521786130806}
+  m_Layer: 0
+  m_Name: WaveSpawner (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7716069555934428972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692783645999832585}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.101807, y: 4.7315865, z: -256.99182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8426453093394882782}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2106662521786130806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692783645999832585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74590107d8f0cb04ca35cb67f4d9c0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  timeBetweenSpawns: 10
+  timeBetweenWaves: 20
+  totalWaves: 3
+--- !u!1 &2073976502265470514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6962911382975954711}
+  - component: {fileID: 1623997386455228749}
+  m_Layer: 0
+  m_Name: WaveSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6962911382975954711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073976502265470514}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 178.70181, y: 4.7315865, z: -118.8465}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8426453093394882782}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1623997386455228749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073976502265470514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74590107d8f0cb04ca35cb67f4d9c0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  timeBetweenSpawns: 10
+  timeBetweenWaves: 20
+  totalWaves: 3
+--- !u!1 &5133340298729893190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4275125978025053283}
+  - component: {fileID: 5583599781045326393}
+  m_Layer: 0
+  m_Name: WaveSpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4275125978025053283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133340298729893190}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 201.6018, y: 4.7315865, z: 70.50815}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8426453093394882782}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5583599781045326393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133340298729893190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74590107d8f0cb04ca35cb67f4d9c0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  timeBetweenSpawns: 10
+  timeBetweenWaves: 20
+  totalWaves: 3
+--- !u!1 &6423345791879724098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2687887393146133863}
+  - component: {fileID: 6009465807999091517}
+  m_Layer: 0
+  m_Name: WaveSpawner (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2687887393146133863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423345791879724098}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 52.80179, y: 4.7315865, z: -106.99184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8426453093394882782}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6009465807999091517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423345791879724098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74590107d8f0cb04ca35cb67f4d9c0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  timeBetweenSpawns: 10
+  timeBetweenWaves: 20
+  totalWaves: 3
+--- !u!1 &6775304612075685346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2481397655139394759}
+  - component: {fileID: 6072840227369499293}
+  m_Layer: 0
+  m_Name: WaveSpawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2481397655139394759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775304612075685346}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -88.7982, y: 4.7315865, z: 22.008148}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8426453093394882782}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6072840227369499293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775304612075685346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74590107d8f0cb04ca35cb67f4d9c0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  timeBetweenSpawns: 10
+  timeBetweenWaves: 20
+  totalWaves: 3
+--- !u!1 &6869180189458863817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2539255429546702828}
+  - component: {fileID: 6130979485509577142}
+  m_Layer: 0
+  m_Name: WaveSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2539255429546702828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869180189458863817}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 201.6018, y: 4.7315865, z: -239.89185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8426453093394882782}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6130979485509577142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869180189458863817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74590107d8f0cb04ca35cb67f4d9c0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToSpawn:
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 159723826766129188, guid: 2a726029eac6497469d5c33649c1f6f0, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  - {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
+  - {fileID: 5922751998574900180, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
+  timeBetweenSpawns: 10
+  timeBetweenWaves: 20
+  totalWaves: 3

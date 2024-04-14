@@ -8,6 +8,7 @@ using SuperPupSystems.Helper;
 public class LoseMenu : MonoBehaviour
 {
     public bool isPlayerDead = false;
+    public bool didLose = false;
 
     public Health playerHealth;
 
@@ -25,6 +26,7 @@ public class LoseMenu : MonoBehaviour
     public void Lose()
     {
         Debug.Log("You have WON!");
+        didLose = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         loseSection.SetActive(true);
