@@ -16,7 +16,7 @@ MonoBehaviour:
   active: 1
   upgradeName: jump Boost
   upgradeDescription: 'Buff: Jump height incresed, Debuff: Can''t move in air'
-  upgradeSprite: {fileID: -1354489458, guid: bf3e7a8099749784c86981fa30215aa5, type: 3}
+  upgradeSprite: {fileID: 247516908, guid: bf3e7a8099749784c86981fa30215aa5, type: 3}
   newColor: {r: 0, g: 0, b: 0, a: 0}
   dropChance: 0
   boostValue: 2

@@ -13,6 +13,10 @@ public class ChargeStatMachine : SimpleStateMachine
     public bool LOS;
     //public float attackZone;
     public Transform target;
+    public float radius;
+    public int dmg;
+    Health health;
+    Rigidbody rb;
 
     private void Awake()
     {
@@ -36,6 +40,28 @@ public class ChargeStatMachine : SimpleStateMachine
 
         LOS = gameObject.GetComponent<FOV>().targetsInSight;
 
+    }
+    public void Explode()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+
+        foreach (Collider hit in colliders)
+        {
+            Debug.Log("BOOM");
+            //hit.GetComponent<Health>()?.Damage(dmg);
+            if (hit.transform.parent)
+            {
+                hit.transform.parent.GetComponentInChildren<Health>()?.Damage(dmg);
+                //hit.transform.parent.GetComponentInChildren<Rigidbody>()?.isKinematic;
+                //hit.transform.parent.GetComponentInChildren<Rigidbody>()?.AddExplosionForce(power, ((ChargeStatMachine)stateMachine).target.position, radius, 0);
+            }
+            else
+            {
+                hit.GetComponentInChildren<Health>()?.Damage(dmg);
+                //hit.transform.GetComponentInChildren<Rigidbody>()?.AddExplosionForce(power, ((ChargeStatMachine)stateMachine).target.position, radius, 0);
+            }
+
+        }
     }
 
 }
