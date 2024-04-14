@@ -16,6 +16,7 @@ public class ChargeStatMachine : SimpleStateMachine
     public float radius;
     public int dmg;
     Health health;
+    public bool isAlive;
     Rigidbody rb;
 
     private void Awake()
@@ -37,7 +38,10 @@ public class ChargeStatMachine : SimpleStateMachine
     }
     void Update()
     {
-
+        if (GetComponentInChildren<Health>().currentHealth > 0)
+            isAlive = true;
+        else
+            isAlive = false;
         LOS = gameObject.GetComponent<FOV>().targetsInSight;
 
     }

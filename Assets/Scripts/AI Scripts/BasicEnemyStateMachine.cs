@@ -15,8 +15,8 @@ public class BasicEnemyStateMachine : SimpleStateMachine
     public Transform target;
     public float attackRange;
     public float attackZone;
+    public bool isAlive;
 
-    
 
     private void Awake()
     {
@@ -36,7 +36,10 @@ public class BasicEnemyStateMachine : SimpleStateMachine
     }
     void Update()
     {
-
+        if (GetComponentInChildren<Health>().currentHealth > 0)
+            isAlive = true;
+        else
+            isAlive = false;
         LOS = gameObject.GetComponent<FOV>().targetsInSight;
 
     }
