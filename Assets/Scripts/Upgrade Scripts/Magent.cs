@@ -6,6 +6,7 @@ public class Magent : MonoBehaviour
 {
     public Transform target;
     public float speed = 4.0f;
+    
    
 
     // Start is called before the first frame update
