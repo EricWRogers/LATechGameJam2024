@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EricTest.unity
     guid: bacd8833d36480cd2bd7c3c482193ef3
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: 3e3f3e75f246e554ab6d64839e916c85
+  - enabled: 1
+    path: Assets/Scenes/Game_Play.unity
+    guid: 27c5d5c184d85c0489cc9fcad64f3df1
   m_configObjects: {}
