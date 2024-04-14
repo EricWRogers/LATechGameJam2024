@@ -30,4 +30,8 @@ MonoBehaviour:
   weaponRange: 50
   fireMode: 1
   destroyOnImpact: 1
+  recoil: 1
+  recoilDamage: 2
+  lifeSteal: 1
+  lifeStealRatio: 0.5
   gun: {fileID: 0}
