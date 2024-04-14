@@ -853,7 +853,7 @@ MonoBehaviour:
   groundCheck: {fileID: 5451896997524376343}
   upgradeSystem: {fileID: 2488344022149906058}
   mag: 0
-  antiSlip: 0
+  antiSlip: 1
   mouseSensitivity: 10
   upDownRange: 60
   isSprinting: 0
