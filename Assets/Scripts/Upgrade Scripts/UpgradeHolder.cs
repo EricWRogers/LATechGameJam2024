@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class UpgradeHolder : MonoBehaviour
 {
-    public Upgrade upgrade1;
-    public Upgrade upgrade2;
-    public Upgrade upgrade3;
+    public Upgrade upgrade;
 
-    public void PickUp(Upgrade chosenUpgrade)
+  
+
+    public void PickUp()
     {
-        chosenUpgrade.PickUp();
+        upgrade.PickUp();
     }
 }
