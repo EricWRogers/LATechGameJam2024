@@ -19,4 +19,11 @@ MonoBehaviour:
   upgradeSprite: {fileID: 247516908, guid: bf3e7a8099749784c86981fa30215aa5, type: 3}
   newColor: {r: 0, g: 0, b: 0, a: 0}
   dropChance: 0
-  nextDashTime: 32.248795
+  dashCoolDown: 2
+  recoil: 1
+  recoilDamage: 5
+  dashForce: 100
+  nextDashTime: 51.98066
+  dashDuration: 0.5
+  dashEnd: 52.48066
+  player: {fileID: 0}
