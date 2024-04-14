@@ -17,7 +17,7 @@ MonoBehaviour:
   upgradeName: Portable Antimater
   upgradeDescription: A large Piercing attack that can go through wall and enemies
     doing massive damage. It takes a long time to fire shots.
-  upgradeSprite: {fileID: 0}
+  upgradeSprite: {fileID: 21300000, guid: e4d2129bab082524cb9acb9f6242084b, type: 3}
   newColor: {r: 0, g: 0, b: 0, a: 0}
   dropChance: 0
   newBullet: {fileID: 8868396285415600353, guid: 1494459154da7114f874280e0afef4f5,
