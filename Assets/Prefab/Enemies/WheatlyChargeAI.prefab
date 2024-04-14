@@ -5068,6 +5068,7 @@ GameObject:
   - component: {fileID: 6954342493631184578}
   - component: {fileID: 4320825301914111303}
   - component: {fileID: 6856024801609365363}
+  - component: {fileID: 3435077247418440062}
   m_Layer: 0
   m_Name: WheatlyCharge
   m_TagString: CANBREAK
@@ -5124,6 +5125,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6856024801609365363}
+        m_TargetAssemblyTypeName: EnemyDefeated, Assembly-CSharp
+        m_MethodName: PlayHurt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: WheatlyDamaged
+          m_BoolArgument: 0
+        m_CallState: 2
+  outOfHealth:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 7286363016917379779}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: Play
@@ -5136,9 +5152,6 @@ MonoBehaviour:
           m_StringArgument: WheatlyDamaged
           m_BoolArgument: 0
         m_CallState: 2
-  outOfHealth:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 6856024801609365363}
         m_TargetAssemblyTypeName: EnemyDefeated, Assembly-CSharp
         m_MethodName: Defeated
@@ -5148,7 +5161,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: WheatlyDamaged
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: 10
@@ -5169,6 +5182,33 @@ MonoBehaviour:
   agent: {fileID: 6668173630009856427}
   particleExplode: {fileID: 7076343278086110101}
   spareParticle: {fileID: 985656514120143754}
+--- !u!54 &3435077247418440062
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146714390881678740}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1406924667518431345
 GameObject:
   m_ObjectHideFlags: 0
@@ -14970,7 +15010,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7336, y: 1.7336, z: 1.7336}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6403669387210328902}

@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.AI;
-using SuperPupSystems.Helper;
 
 public class EnemyDefeated : MonoBehaviour
 {
@@ -16,13 +15,14 @@ public class EnemyDefeated : MonoBehaviour
 
     bool shrink;
 
+    int rand;
     private void Start()
     {
         light = GetComponentInChildren<Light>();
         particle = GetComponentInChildren<ParticleSystem>();
         anim = GetComponentInChildren<Animator>();
         rigi = GetComponent<Rigidbody>();
-        
+
         //agent.GetComponentInParent<NavMeshAgent>();
     }
     public void Defeated()
@@ -33,9 +33,9 @@ public class EnemyDefeated : MonoBehaviour
             spareParticle.enableEmission = false;
         }
         agent.enabled = false;
-        
-        
-        
+
+
+
 
         light.enabled = false;
         anim.enabled = false;
@@ -68,6 +68,27 @@ public class EnemyDefeated : MonoBehaviour
                 //Debug.Log("Dead");
                 Destroy(gameObject);
             }
+
+        }
+    }
+
+
+
+    public void PlayHurt()
+    {
+        rand = Random.Range(0, 2);
+        switch (rand)
+        {
+            case 0:
+                anim.Play("WheatlyHurt");
+                break;
+
+            case 1:
+                anim.Play("WheatlyHurt2");
+                break;
+            case 2:
+                anim.Play("WheatlyHurt3");
+                break;
 
         }
     }
