@@ -1,14 +1,19 @@
+using SuperPupSystems.Helper;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Setter : MonoBehaviour
 {
-    public AttackState attackState;
+    public int dmg;
+    public Health playerHealth;
+
+
     public void Set()
     {
         Debug.Log("Enemy attacking");
-        attackState.isAttacking = true;
+        playerHealth.Damage(dmg);
+
     }
     
 }
