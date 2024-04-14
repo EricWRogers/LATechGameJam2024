@@ -25980,6 +25980,7 @@ GameObject:
   - component: {fileID: 2891122379711154816}
   - component: {fileID: 8735149887186779495}
   - component: {fileID: 8602333916017769720}
+  - component: {fileID: 7130133591127671689}
   m_Layer: 0
   m_Name: WHEATLYHENCH
   m_TagString: CANBREAK
@@ -26087,6 +26088,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.78, y: 0.52, z: 0.97}
   m_Center: {x: -0.93, y: 0, z: -1.92}
+--- !u!114 &7130133591127671689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474674612844955748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ce69b25606142449ab64b5c3909966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 5
+  playerHealth: {fileID: 5745196980506287752}
 --- !u!1 &5537407976543809405
 GameObject:
   m_ObjectHideFlags: 0
