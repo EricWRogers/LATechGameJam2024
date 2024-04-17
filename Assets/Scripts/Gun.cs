@@ -12,13 +12,15 @@ public class Gun : MonoBehaviour
     public float weaponRange = 50f;
     public int damagePerShot = 20;
 
-    public int ammo = 10;
+    public int ammo = int.MaxValue;
+    public int limitedAmmo = 10;
 
     private float nextFireTime;
 
     public int fireMode = 0;
 
     private Animator anim;
+    public bool infintAmmo = true;
 
 
     public GameObject flash1;
@@ -68,7 +70,12 @@ public class Gun : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) && pausedGame.isGamePaused == false)
         {
-            ammo = 10;
+            ammo = limitedAmmo;
+        }
+
+        if (ammo <= 0 && infintAmmo == true)
+        {
+            ammo = int.MaxValue;
         }
     }
 

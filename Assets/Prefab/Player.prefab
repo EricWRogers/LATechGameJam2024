@@ -209,7 +209,9 @@ MonoBehaviour:
   weaponRange: 50
   damagePerShot: 20
   ammo: 2147483647
+  limitedAmmo: 10
   fireMode: 1
+  infintAmmo: 1
   flash1: {fileID: 1238904037095825548}
   flash2: {fileID: 1667160238499374115}
   flash3: {fileID: 9008996933562886544}
@@ -1904,6 +1906,11 @@ PrefabInstance:
     - target: {fileID: 7501070036653936716, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: m_Name
+      value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 7501070036653936716, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_TagString
       value: HUD
       objectReference: {fileID: 0}
     - target: {fileID: 8293015961041386500, guid: f35632d41f56f744a9e3f322561f0bad,
