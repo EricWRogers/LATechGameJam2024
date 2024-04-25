@@ -8,12 +8,22 @@ using UnityEngine.AI;
 
 public class MoveInRangeState : SimpleState
 {
-    public NavMeshAgent agent;
-
+    NavMeshAgent agent;
 
     public override void OnStart()
     {
+        Debug.Log("Move State");
         base.OnStart();
+        if (stateMachine is RangedEnemyStateMachine)
+            agent = ((RangedEnemyStateMachine)stateMachine).GetComponent<NavMeshAgent>();
+
+        if (stateMachine is BasicEnemyStateMachine)
+            agent = ((BasicEnemyStateMachine)stateMachine).GetComponent<NavMeshAgent>();
+
+        if (stateMachine is ChargeStatMachine)
+            agent = ((ChargeStatMachine)stateMachine).GetComponent<NavMeshAgent>();
+
+
         if (stateMachine is RangedEnemyStateMachine)
         {
             if(((RangedEnemyStateMachine)stateMachine).isAlive == true)
@@ -41,6 +51,16 @@ public class MoveInRangeState : SimpleState
                 if (((RangedEnemyStateMachine)stateMachine).LOS)
                 {
                     stateMachine.ChangeState(nameof(AttackState));
+                }
+            }
+        }
+        if (stateMachine is RangedEnemyStateMachine)
+        {
+            if (((RangedEnemyStateMachine)stateMachine).isAlive == true)
+            {
+                if (((RangedEnemyStateMachine)stateMachine).Flee)
+                {
+                    stateMachine.ChangeState(nameof(FleeState));
                 }
             }
         }

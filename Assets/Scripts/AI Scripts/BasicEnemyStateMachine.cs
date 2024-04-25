@@ -13,8 +13,6 @@ public class BasicEnemyStateMachine : SimpleStateMachine
 
     public bool LOS;
     public Transform target;
-    public float attackRange;
-    public float attackZone;
     public bool isAlive;
 
 

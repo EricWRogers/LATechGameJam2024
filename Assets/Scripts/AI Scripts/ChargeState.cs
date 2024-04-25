@@ -11,7 +11,7 @@ using static UnityEngine.GraphicsBuffer;
 public class ChargeState : SimpleState
 {
     public Timer time;
-    public NavMeshAgent agent;
+    NavMeshAgent agent;
     public float power;
     
 
@@ -19,7 +19,8 @@ public class ChargeState : SimpleState
     public override void OnStart()
     {
         Debug.Log("Charge State");
-        base.OnStart(); 
+        base.OnStart();
+        agent = ((ChargeStatMachine)stateMachine).GetComponent<NavMeshAgent>();
         agent.SetDestination(((ChargeStatMachine)stateMachine).transform.position);
         ((ChargeStatMachine)stateMachine).Explode();
     }

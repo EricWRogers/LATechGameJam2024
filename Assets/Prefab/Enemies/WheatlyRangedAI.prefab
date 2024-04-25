@@ -10484,6 +10484,7 @@ GameObject:
   - component: {fileID: 2947837134791151771}
   - component: {fileID: 712259614861245739}
   - component: {fileID: 976020245656348252}
+  - component: {fileID: 5603736061448436976}
   m_Layer: 0
   m_Name: WheatlyRangedAI
   m_TagString: CANBREAK
@@ -10520,6 +10521,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   states: []
+  flee:
+    stateStart:
+      m_PersistentCalls:
+        m_Calls: []
+    stateUpdated:
+      m_PersistentCalls:
+        m_Calls: []
+    stateExited:
+      m_PersistentCalls:
+        m_Calls: []
+    stateMachine: {fileID: 0}
+    pos: 0
   moveInRange:
     stateStart:
       m_PersistentCalls:
@@ -10531,7 +10544,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     stateMachine: {fileID: 0}
-    agent: {fileID: 976020245656348252}
   shoot:
     stateStart:
       m_PersistentCalls:
@@ -10598,10 +10610,13 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    agent: {fileID: 976020245656348252}
     isAttacking: 0
   LOS: 0
+  Flee: 0
   target: {fileID: 0}
+  isAlive: 0
+  ranMinFlee: 5
+  ranMaxFlee: 10
 --- !u!114 &2947837134791151771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10614,7 +10629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36294c4beb0d9e642a8b24f57e94e289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 10
+  viewRadius: 20
   viewAngle: 360
   targetMask:
     serializedVersion: 2
@@ -10665,6 +10680,28 @@ NavMeshAgent:
   m_BaseOffset: 2.32
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5603736061448436976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922751998574900180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c6eff930da3514cbd5eaee47285e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 360
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 64
+  visibleTargets: []
+  targetsInSight: 0
 --- !u!1 &6146641286335590258
 GameObject:
   m_ObjectHideFlags: 0

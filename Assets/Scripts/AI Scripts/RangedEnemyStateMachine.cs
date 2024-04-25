@@ -7,16 +7,20 @@ using UnityEngine.AI;
 
 public class RangedEnemyStateMachine : SimpleStateMachine
 {
+    public FleeState flee;
     public MoveInRangeState moveInRange;
     public AttackState shoot;
 
     public bool LOS;
-    //public float attackZone;
+    public bool Flee;
     public Transform target;
     public bool isAlive;
+    public int ranMinFlee;
+    public int ranMaxFlee;
 
     private void Awake()
     {
+        states.Add(flee);
         states.Add(moveInRange);
         states.Add(shoot);
 
@@ -34,11 +38,13 @@ public class RangedEnemyStateMachine : SimpleStateMachine
     }
     void Update()
     {
-        if(GetComponentInChildren<Health>().currentHealth > 0)
+        if (GetComponentInChildren<Health>().currentHealth > 0)
             isAlive = true;
         else
             isAlive = false;
         LOS = gameObject.GetComponent<FOV>().targetsInSight;
+        Flee = gameObject.GetComponent<FleeRange>().targetsInSight;
+
 
     }
 

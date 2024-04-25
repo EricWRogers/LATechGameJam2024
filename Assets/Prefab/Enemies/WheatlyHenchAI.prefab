@@ -21116,7 +21116,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     stateMachine: {fileID: 0}
-    agent: {fileID: 5125197041916324445}
   attack:
     stateStart:
       m_PersistentCalls:
@@ -21159,12 +21158,9 @@ MonoBehaviour:
     stopAttacking:
       m_PersistentCalls:
         m_Calls: []
-    agent: {fileID: 5125197041916324445}
     isAttacking: 0
   LOS: 0
   target: {fileID: 0}
-  attackRange: 3
-  attackZone: 3
   isAlive: 0
 --- !u!114 &2041534507267789544
 MonoBehaviour:
@@ -26357,7 +26353,6 @@ MonoBehaviour:
     stopAttacking:
       m_PersistentCalls:
         m_Calls: []
-    agent: {fileID: 0}
     isAttacking: 0
 --- !u!1 &5537407976543809405
 GameObject:

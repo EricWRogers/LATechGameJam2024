@@ -169,7 +169,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     stateMachine: {fileID: 0}
-    agent: {fileID: 6668173630009856427}
   Charge:
     stateStart:
       m_PersistentCalls:
@@ -182,7 +181,6 @@ MonoBehaviour:
         m_Calls: []
     stateMachine: {fileID: 0}
     time: {fileID: 3246376089709358553}
-    agent: {fileID: 6668173630009856427}
     power: 30
   LOS: 0
   target: {fileID: 0}
