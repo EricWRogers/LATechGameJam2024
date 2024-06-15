@@ -52,7 +52,7 @@ Material:
     - _Size: 30
     - _Speed: 30
     m_Colors:
-    - _Color_Peak: {r: 0.5166429, g: 0.6786598, b: 0.8490566, a: 0}
+    - _Color_Peak: {r: 0.488341, g: 0.53491926, b: 0.5849056, a: 0}
     - _Color_Valley: {r: 0.020469919, g: 0.15120254, b: 0.18867922, a: 0}
     - _Noise_Remap: {r: -0.24, g: 0.95, b: -1.6, a: 0.61}
     - _Rotate_Projection: {r: 1, g: 0, b: 0, a: 90}
