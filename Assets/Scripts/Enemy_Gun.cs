@@ -13,6 +13,8 @@ public class Enemy_Gun : MonoBehaviour
     public GameObject flash2;
     public GameObject flash3;
 
+    public AudioSource laserShot;
+
 
     void Start()
     {
@@ -36,6 +38,7 @@ public class Enemy_Gun : MonoBehaviour
 
         GameObject bulletObj = Instantiate(Bullet_Enemy, spawnPoint.transform.position, spawnPoint.transform.rotation) as GameObject;
         MuzzleFlash();
+        laserShot.Play();
         Invoke("Delay", .08f);
     }
 
