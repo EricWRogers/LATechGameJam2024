@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 351504792}
   - component: {fileID: 351504794}
   - component: {fileID: 351504793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5347,8 +5347,9 @@ GameObject:
   - component: {fileID: 686315113}
   - component: {fileID: 686315112}
   - component: {fileID: 686315111}
-  m_Layer: 0
-  m_Name: WheatlyCharge (1)
+  - component: {fileID: 686315116}
+  m_Layer: 7
+  m_Name: Wheatly_Charge (1)
   m_TagString: CANBREAK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5716,6 +5717,27 @@ MonoBehaviour:
         m_CallState: 2
   maxHealth: 5
   currentHealth: 5
+--- !u!135 &686315116
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686315109}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.00001
+  m_Center: {x: 0.03, y: 1.79, z: 0}
 --- !u!1 &694596104
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,7 +5749,7 @@ GameObject:
   - component: {fileID: 694596105}
   - component: {fileID: 694596107}
   - component: {fileID: 694596106}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flame (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10673,7 +10695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &887362054
 Transform:
   m_ObjectHideFlags: 0
@@ -10771,7 +10793,7 @@ GameObject:
   - component: {fileID: 960366932}
   - component: {fileID: 960366934}
   - component: {fileID: 960366933}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11047,7 +11069,7 @@ PrefabInstance:
     - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.43
+      value: 9.96
       objectReference: {fileID: 0}
     - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
         type: 3}
@@ -11057,7 +11079,7 @@ PrefabInstance:
     - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.58
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 6466909699995953764, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
         type: 3}
@@ -11127,7 +11149,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2608574719550197464, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1886702417}
   m_SourcePrefab: {fileID: 100100000, guid: a75f6a7f3eb86cf4d9b77209eff1b549, type: 3}
 --- !u!1 &1019381004
 GameObject:
@@ -11147,7 +11173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1019381005
 Transform:
   m_ObjectHideFlags: 0
@@ -11245,7 +11271,7 @@ GameObject:
   - component: {fileID: 1108796570}
   - component: {fileID: 1108796572}
   - component: {fileID: 1108796571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16139,7 +16165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1133559909
 Transform:
   m_ObjectHideFlags: 0
@@ -16305,7 +16331,7 @@ GameObject:
   - component: {fileID: 1252094590}
   - component: {fileID: 1252094592}
   - component: {fileID: 1252094591}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21413,7 +21439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1394575189
 Transform:
   m_ObjectHideFlags: 0
@@ -21511,7 +21537,7 @@ GameObject:
   - component: {fileID: 1443538786}
   - component: {fileID: 1443538788}
   - component: {fileID: 1443538787}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21652,6 +21678,33 @@ Transform:
   - {fileID: 1293249574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1505250663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3747130116109797287, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6829659006140201796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1505250670
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505250663}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.00001
+  m_Center: {x: 0.03, y: 1.79, z: 0}
 --- !u!1 &1518643233
 GameObject:
   m_ObjectHideFlags: 0
@@ -21718,7 +21771,7 @@ GameObject:
   - component: {fileID: 1565425356}
   - component: {fileID: 1565425358}
   - component: {fileID: 1565425357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26605,7 +26658,7 @@ GameObject:
   - component: {fileID: 1571767142}
   - component: {fileID: 1571767144}
   - component: {fileID: 1571767143}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WHEATLYCHARGE
   m_TagString: CANBREAK
   m_Icon: {fileID: 0}
@@ -26681,7 +26734,7 @@ GameObject:
   - component: {fileID: 1585245101}
   - component: {fileID: 1585245103}
   - component: {fileID: 1585245102}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31677,7 +31730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1681388997}
   - component: {fileID: 1681388998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GFX
   m_TagString: Critical
   m_Icon: {fileID: 0}
@@ -31744,12 +31797,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 617495505}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1825891925 stripped
+--- !u!1 &1886702409 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4027015583044046712, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
+  m_CorrespondingSourceObject: {fileID: 2608574719550197464, guid: a75f6a7f3eb86cf4d9b77209eff1b549,
     type: 3}
   m_PrefabInstance: {fileID: 1010636040}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &1886702417
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886702409}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.00001
+  m_Center: {x: 0.03, y: 1.79, z: 0}
 --- !u!1 &1987739535
 GameObject:
   m_ObjectHideFlags: 0
@@ -32119,6 +32193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1146714390881678740, guid: 2a726029eac6497469d5c33649c1f6f0,
         type: 3}
+      propertyPath: m_Name
+      value: Wheatly_Charge
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146714390881678740, guid: 2a726029eac6497469d5c33649c1f6f0,
+        type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
@@ -32364,7 +32443,7 @@ Transform:
   m_GameObject: {fileID: 5281382833477905731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.97, z: 3.7}
+  m_LocalPosition: {x: 4.73, y: 2.97, z: 3.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32405,8 +32484,8 @@ GameObject:
   - component: {fileID: 1726658610405643468}
   - component: {fileID: 5281382833477905732}
   - component: {fileID: 5281382833477905734}
-  - component: {fileID: 5281382833477905733}
-  m_Layer: 0
+  - component: {fileID: 5281382833477905735}
+  m_Layer: 7
   m_Name: Healer
   m_TagString: CANBREAK
   m_Icon: {fileID: 0}
@@ -32451,32 +32530,10 @@ MonoBehaviour:
     fireRate: 1
   LOS: 0
   inHealRange: 0
-  target: {fileID: 1825891925}
+  target: {fileID: 0}
   isAlive: 1
   healAmount: 2
   lowestHealth: 100
---- !u!114 &5281382833477905733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5281382833477905731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36294c4beb0d9e642a8b24f57e94e289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewRadius: 5
-  viewAngle: 360
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 8
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 64
-  visibleTargets: []
-  targetsInSight: 0
 --- !u!114 &5281382833477905734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32490,6 +32547,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 10
+  viewAngle: 360
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 8
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 64
+  visibleTargets: []
+  targetsInSight: 0
+--- !u!114 &5281382833477905735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5281382833477905731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36294c4beb0d9e642a8b24f57e94e289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 5
   viewAngle: 360
   targetMask:
     serializedVersion: 2
@@ -32715,7 +32794,7 @@ PrefabInstance:
     - target: {fileID: 7455782996230608401, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.52
+      value: 8.8
       objectReference: {fileID: 0}
     - target: {fileID: 7455782996230608401, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
         type: 3}
@@ -32725,7 +32804,7 @@ PrefabInstance:
     - target: {fileID: 7455782996230608401, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.21
+      value: 4.45
       objectReference: {fileID: 0}
     - target: {fileID: 7455782996230608401, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
         type: 3}
@@ -32850,7 +32929,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3747130116109797287, guid: 01c1ebeedd0a1734e84f6ff5afea124d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1505250670}
   m_SourcePrefab: {fileID: 100100000, guid: 01c1ebeedd0a1734e84f6ff5afea124d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
