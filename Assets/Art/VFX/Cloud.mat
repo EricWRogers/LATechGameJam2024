@@ -21,9 +21,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Cloud
-  m_Shader: {fileID: -6465566751694194690, guid: 1b60c220caa32a48da38078fdf03efad,
+  m_Shader: {fileID: -6465566751694194690, guid: e62e0de2f776e664fb9ac9e2ebf4a01c,
     type: 3}
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 2100000, guid: 5a683356f7e5a28449e31e2a54327ab5, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -36,35 +36,24 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
     - _Base_Scale: 0.01
     - _Base_Speed: 20
     - _Base_Strength: 2
+    - _Curvature_radius: 250
+    - _Fade_Depth: 195
+    - _Fresnel_Opacity: 1
+    - _Fresnel_Power: 167.83
     - _Noise_Edge_1: -1
     - _Noise_Edge_2: 2
-    - _Noise_Power: 2
     - _Noise_Scale: 0.02
-    - _QueueControl: 0
-    - _QueueOffset: 0
     - _Size: 30
     - _Speed: 30
     m_Colors:
-    - _Color_Peak: {r: 0.7007066, g: 0.8476219, b: 1, a: 0}
-    - _Color_Valley: {r: 0.020945936, g: 0.60839504, b: 0.7783491, a: 0}
+    - _Color_Peak: {r: 0.5166429, g: 0.6786598, b: 0.8490566, a: 0}
+    - _Color_Valley: {r: 0.020469919, g: 0.15120254, b: 0.18867922, a: 0}
     - _Noise_Remap: {r: -0.24, g: 0.95, b: -1.6, a: 0.61}
     - _Rotate_Projection: {r: 1, g: 0, b: 0, a: 90}
   m_BuildTextureStacks: []
