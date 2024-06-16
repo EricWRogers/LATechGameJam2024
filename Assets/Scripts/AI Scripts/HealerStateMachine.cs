@@ -29,6 +29,7 @@ public class HealerStateMachine : SimpleStateMachine
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
         ChangeState(nameof(MoveInRangeState));
     }
 
@@ -45,12 +46,13 @@ public class HealerStateMachine : SimpleStateMachine
         for (int i = 0; i < gameObject.GetComponent<HealRange>().visibleTargets.Count; i++)
         {
             int hp = gameObject.GetComponent<HealRange>().visibleTargets[i].GetComponentInChildren<Health>().currentHealth;
-
+            
             if (lowestHealth > hp)
             {
                 target = gameObject.GetComponent<HealRange>().visibleTargets[i];
-                Debug.Log("Heal" + gameObject);
+                Debug.Log("" + hp, target);
             }
+            
         }
     }
 }

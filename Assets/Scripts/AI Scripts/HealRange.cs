@@ -1,3 +1,4 @@
+using SuperPupSystems.Helper;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class HealRange : MonoBehaviour
 
     public LayerMask targetMask;
     public LayerMask obstacleMask;
-    [HideInInspector]
+    //[HideInInspector]
     public List<GameObject> visibleTargets = new List<GameObject>();
     [HideInInspector]
     public bool targetsInSight;
@@ -34,7 +35,11 @@ public class HealRange : MonoBehaviour
                 float dstToTarget = Vector3.Distance(transform.position, target.transform.position);
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
                 {
-                    visibleTargets.Add(target);
+                    if (target.GetComponent<Health>() != null)
+                    {
+                        visibleTargets.Add(target);
+                    }
+                    
 
                 }
             }
