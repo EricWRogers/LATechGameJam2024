@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using SuperPupSystems.Helper;
+using SuperPupSystems.Manager;
 using UnityEngine;
 
 public class LifeSteal : MonoBehaviour
@@ -19,6 +21,7 @@ public class LifeSteal : MonoBehaviour
 
     public void Drain()
     {
+        ScoreManager.instance.AddPoints(_amount: gameObject.GetComponent<Bullet>().damage, _location: transform.position);
         if(drain)
         {
             GameObject.FindWithTag("Player").GetComponent<SuperPupSystems.Helper.Health>().Heal((int)(GetComponent<SuperPupSystems.Helper.Bullet>().damage*lifeStealRatio));

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20505631, g: 0.15675214, b: 0.349577, a: 1}
+  m_IndirectSpecularColor: {r: 0.20506114, g: 0.15675528, b: 0.3495737, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39230,6 +39230,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1065384192}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1069369569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069369572}
+  - component: {fileID: 1069369571}
+  - component: {fileID: 1069369570}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1069369570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069369569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7f0bbca9048d364ae9e2603f24aafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6114869509960142591, guid: e0a30eb7efe14ce7d87e76297979c48e, type: 3}
+  textLifeTime: 2
+  spawnCloser: 1
+--- !u!114 &1069369571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069369569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c4d11a58b510e70bc0c9217790ae6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateScore:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1069369570}
+        m_TargetAssemblyTypeName: SuperPupSystems.DamageNumbersSpawner, Assembly-CSharp
+        m_MethodName: SpawnText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1069369572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069369569}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 885.2538, y: 85.96434, z: 620.2031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1071013291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72934,3 +73009,4 @@ SceneRoots:
   - {fileID: 1868902218}
   - {fileID: 365480495}
   - {fileID: 1689962690}
+  - {fileID: 1069369572}
