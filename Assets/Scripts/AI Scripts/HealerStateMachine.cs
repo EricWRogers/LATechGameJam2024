@@ -16,7 +16,6 @@ public class HealerStateMachine : SimpleStateMachine
     public bool isAlive;
     public int healAmount;
     private int counter;
-    public int lowestHealth = 100;
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,7 +28,6 @@ public class HealerStateMachine : SimpleStateMachine
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
         ChangeState(nameof(MoveInRangeState));
     }
 
@@ -43,16 +41,6 @@ public class HealerStateMachine : SimpleStateMachine
         LOS = gameObject.GetComponent<FOV>().targetsInSight;
         inHealRange = gameObject.GetComponent<HealRange>().targetsInSight;
 
-        for (int i = 0; i < gameObject.GetComponent<HealRange>().visibleTargets.Count; i++)
-        {
-            int hp = gameObject.GetComponent<HealRange>().visibleTargets[i].GetComponentInChildren<Health>().currentHealth;
-            
-            if (lowestHealth > hp)
-            {
-                target = gameObject.GetComponent<HealRange>().visibleTargets[i];
-                Debug.Log("" + hp, target);
-            }
-            
-        }
+        
     }
 }

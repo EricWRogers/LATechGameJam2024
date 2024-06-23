@@ -37,13 +37,17 @@ public class HealRange : MonoBehaviour
                 {
                     if (target.GetComponent<Health>() != null)
                     {
-                        visibleTargets.Add(target);
+                        int diff = targetsInViewRadius[i].GetComponentInChildren<Health>().maxHealth - targetsInViewRadius[i].GetComponentInChildren<Health>().currentHealth;
+                                  
+                        if (diff != 0 && diff != targetsInViewRadius[i].GetComponentInChildren<Health>().maxHealth)
+                        {
+                            visibleTargets.Add(target);
+                        }
                     }
-                    
-
                 }
             }
         }
+
         if (visibleTargets.Count > 0)
         {
             targetsInSight = true;
