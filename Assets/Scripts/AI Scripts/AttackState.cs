@@ -5,7 +5,6 @@ using SuperPupSystems.Helper;
 using SuperPupSystems.StateMachine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-using static UnityEngine.GraphicsBuffer;
 
 [System.Serializable]
 public class AttackState : SimpleState
