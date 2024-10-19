@@ -1903,6 +1903,11 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 2892953045110323924}
+    - target: {fileID: 7197771564658325814, guid: f35632d41f56f744a9e3f322561f0bad,
+        type: 3}
+      propertyPath: m_text
+      value: PRESS ENTER OR 'Q' TO LEAVE
+      objectReference: {fileID: 0}
     - target: {fileID: 7501070036653936716, guid: f35632d41f56f744a9e3f322561f0bad,
         type: 3}
       propertyPath: m_Name
