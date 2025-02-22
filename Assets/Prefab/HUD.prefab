@@ -931,7 +931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6689282615389798746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4376,6 +4376,7 @@ GameObject:
   - component: {fileID: 1915527667047518538}
   - component: {fileID: 5501289496062621378}
   - component: {fileID: 1871381207431026972}
+  - component: {fileID: 4958629108730206178}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -4575,6 +4576,18 @@ MonoBehaviour:
   - {fileID: 7045497382957946547}
   - {fileID: 1232913696799877807}
   playerUpgradeSystem: {fileID: 0}
+--- !u!114 &4958629108730206178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501070036653936716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab3b198c5b7db14f912925b4ac6dbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7501162526042971384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,16 +5152,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3379270761602602422}
-        m_TargetAssemblyTypeName: WinMenu, Assembly-CSharp
-        m_MethodName: Retry
-        m_Mode: 1
+      - m_Target: {fileID: 4958629108730206178}
+        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: EndScreen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8660913614937724344
