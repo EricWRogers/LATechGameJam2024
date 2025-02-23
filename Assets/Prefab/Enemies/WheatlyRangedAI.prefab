@@ -10792,11 +10792,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   states: []
+  stateName: 
   flee:
     stateStart:
-      m_PersistentCalls:
-        m_Calls: []
-    stateUpdated:
       m_PersistentCalls:
         m_Calls: []
     stateExited:
@@ -10808,18 +10806,12 @@ MonoBehaviour:
     stateStart:
       m_PersistentCalls:
         m_Calls: []
-    stateUpdated:
-      m_PersistentCalls:
-        m_Calls: []
     stateExited:
       m_PersistentCalls:
         m_Calls: []
     stateMachine: {fileID: 0}
   shoot:
     stateStart:
-      m_PersistentCalls:
-        m_Calls: []
-    stateUpdated:
       m_PersistentCalls:
         m_Calls: []
     stateExited:
@@ -25853,7 +25845,7 @@ MonoBehaviour:
   flash1: {fileID: 2780385466021135119}
   flash2: {fileID: 5674940063073316677}
   flash3: {fileID: 2075387274473233617}
-  laserShot: {fileID: 0}
+  laserShot: {fileID: 1186747462300726458}
 --- !u!1001 &2075387274473134713
 PrefabInstance:
   m_ObjectHideFlags: 0

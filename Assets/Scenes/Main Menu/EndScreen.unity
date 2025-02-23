@@ -204,13 +204,14 @@ GameObject:
   - component: {fileID: 225473832}
   - component: {fileID: 225473831}
   - component: {fileID: 225473835}
+  - component: {fileID: 225473836}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &225473831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +309,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaed5ede8f7307489fa24e457494147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &225473836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225473830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0600b6f40aefe3846b3cbefd67fae419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInTime: 6
+  title: {fileID: 2106865317}
 --- !u!1 &229543670
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +520,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274379170}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 62b1ddda8f50566409cc9cd16ed6e0a7, type: 3}
@@ -1299,7 +1314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1373417474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6737,7 +6752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2093262625
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7056,8 +7071,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
